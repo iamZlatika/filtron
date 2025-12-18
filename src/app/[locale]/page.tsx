@@ -2,7 +2,7 @@ import Dashboard from "@/components/sections/dashboard";
 
 export default function Home() {
   return (
-    <div className="wrapper flex justify-between items-center">
+    <div className="flex justify-between items-center">
       <Dashboard />
     </div>
   );

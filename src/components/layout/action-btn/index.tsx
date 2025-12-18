@@ -11,7 +11,7 @@ interface IActionButton {
 const ActionButton = ({ title, color }: IActionButton) => {
   return (
     <Link href="/order">
-      <Button className="bg-primary text-white text-sm md:text-base h-9 md:h-10 px-4 py-2 rounded-md hover:bg-primary/90 transition-colors">
+      <Button className="bg-primary text-white text-base md:text-lg h-9 md:h-10 px-4 py-2 rounded-md hover:bg-primary/90 transition-colors">
         {title}
       </Button>
     </Link>

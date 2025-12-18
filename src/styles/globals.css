@@ -56,7 +56,9 @@
     * {
 
     }
-
+    html {
+               overflow-y: scroll;
+    }
     body {
         @apply bg-background text-foreground;
     }

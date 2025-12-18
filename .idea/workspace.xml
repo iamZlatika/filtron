@@ -5,17 +5,54 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="49dcc720-8a1c-4638-8891-65dbcda4c085" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/app/fonts.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/layout/footer/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/layout/header/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/constants.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eslint.config.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/eslint.config.mjs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/b2b.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/corporative.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/delivery.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/order_autoparts.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/[locale]/contacts/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/[locale]/layout.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/[locale]/order/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/[locale]/services/b2b/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/[locale]/services/delivery/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/[locale]/services/order/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/[locale]/wix-filters/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/layout/breadcrumb/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/layout/header/language-switcher.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/sections/contacts/google-map.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/hooks/useTranslations.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/i18n/dictionary/uk.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/i18n/getDictionary.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/proxy.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/about-us/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/about-us/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/autoparts/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/autoparts/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/contacts/page.tsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/order/page.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/providers.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/services/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/services/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/wix-filters/page.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layout/action-btn/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/action-btn/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layout/header/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/header/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layout/header/navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/header/navbar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/sections/dashboard/banner.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sections/dashboard/banner.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/sections/dashboard/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sections/dashboard/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/i18n/dictionary.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/i18n/dictionary/ru.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/i18n/i18n.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tailwind.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="EmbeddingIndexingInfo">
+    <option name="cachedIndexableFilesCount" value="69" />
+    <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -34,12 +71,14 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
     "git-widget-placeholder": "main",
+    "javascript.preferred.runtime.type.id": "node",
     "js.debugger.nextJs.config.created.client": "true",
     "js.debugger.nextJs.config.created.server": "true",
     "junie.onboarding.icon.badge.shown": "true",
-    "last_opened_file_path": "/home/zlata/home/zlatika/work/filtron",
+    "last_opened_file_path": "/home/zlata/home/zlatika/work/filtron/public",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
     "node.js.detected.package.tslint": "true",
@@ -47,6 +86,7 @@
     "node.js.selected.package.standard": "",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "prettierjs.PrettierConfiguration.Package": "/home/zlata/home/zlatika/work/filtron/node_modules/prettier",
     "settings.editor.selected.configurable": "editing.templates",
     "to.speed.mode.migration.done": "true",
     "ts.external.directory.path": "/home/zlata/home/zlatika/work/filtron/node_modules/typescript/lib",
@@ -55,7 +95,16 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/public" />
+      <recent name="$PROJECT_DIR$/src/lib/i18n" />
+      <recent name="$PROJECT_DIR$/src/app/autoparts" />
+      <recent name="$PROJECT_DIR$/src/app/about-us" />
+      <recent name="$PROJECT_DIR$/src/app/Services" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/app" />
+      <recent name="$PROJECT_DIR$/src/app/[locale]" />
+      <recent name="$PROJECT_DIR$/src/styles" />
     </key>
   </component>
   <component name="RunManager" selected="npm.Next.js: server-side">
@@ -76,7 +125,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-a71380e98a7c-JavaScript-WS-252.28238.10" />
+        <option value="bundled-js-predefined-d6986cc7102b-c7e53b3be11b-JavaScript-WS-253.28294.332" />
       </set>
     </attachedChunks>
   </component>
@@ -89,6 +138,22 @@
       <updated>1763984723633</updated>
       <workItem from="1763984724855" duration="147000" />
       <workItem from="1764063405347" duration="5332000" />
+      <workItem from="1764864303194" duration="5812000" />
+      <workItem from="1764870518660" duration="435000" />
+      <workItem from="1765185439191" duration="320000" />
+      <workItem from="1765284551107" duration="19041000" />
+      <workItem from="1765390282732" duration="687000" />
+      <workItem from="1765441028431" duration="599000" />
+      <workItem from="1765448180457" duration="3000" />
+      <workItem from="1765448820912" duration="3000" />
+      <workItem from="1765526647799" duration="54000" />
+      <workItem from="1765705943766" duration="1000" />
+      <workItem from="1765785460462" duration="1000" />
+      <workItem from="1765874454067" duration="599000" />
+      <workItem from="1765877273780" duration="101000" />
+      <workItem from="1765877654802" duration="8000" />
+      <workItem from="1765878213535" duration="32000" />
+      <workItem from="1766057090198" duration="13353000" />
     </task>
     <servers />
   </component>
@@ -100,9 +165,25 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/app/layout.tsx</url>
-          <line>1</line>
-          <properties lambdaOrdinal="-1" />
+          <line>2</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/lib/utils.ts</url>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/components/layout/header/navbar.tsx</url>
+          <line>2</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/lib/i18n/getDictionary.ts</url>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/components/sections/dashboard/index.tsx</url>
+          <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
