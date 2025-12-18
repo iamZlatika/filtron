@@ -4,47 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="49dcc720-8a1c-4638-8891-65dbcda4c085" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/public/b2b.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/corporative.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/delivery.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/order_autoparts.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/[locale]/contacts/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/[locale]/layout.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/[locale]/order/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/[locale]/services/b2b/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/[locale]/services/delivery/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/[locale]/services/order/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/[locale]/wix-filters/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/layout/breadcrumb/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/layout/header/language-switcher.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/sections/contacts/google-map.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hooks/useTranslations.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/i18n/dictionary/uk.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/i18n/getDictionary.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/proxy.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/about-us/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/about-us/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/autoparts/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/autoparts/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/contacts/page.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/order/page.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/providers.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/services/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/services/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/wix-filters/page.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/layout/action-btn/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/action-btn/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/layout/header/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/header/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/layout/header/navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/header/navbar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/sections/dashboard/banner.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sections/dashboard/banner.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/sections/dashboard/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sections/dashboard/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/i18n/dictionary.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/i18n/dictionary/ru.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/i18n/i18n.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/globals.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tailwind.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.ts" afterDir="false" />
-    </list>
+    <list default="true" id="49dcc720-8a1c-4638-8891-65dbcda4c085" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -153,7 +113,7 @@
       <workItem from="1765877273780" duration="101000" />
       <workItem from="1765877654802" duration="8000" />
       <workItem from="1765878213535" duration="32000" />
-      <workItem from="1766057090198" duration="13353000" />
+      <workItem from="1766057090198" duration="13852000" />
     </task>
     <servers />
   </component>
