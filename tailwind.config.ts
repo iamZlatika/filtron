@@ -24,6 +24,12 @@ const config: Config = {
           DEFAULT: "var(--muted)",
           foreground: "var(--muted-foreground)",
         },
+        input: "var(--input)",
+        ring: "var(--ring)",
+        destructive: {
+          DEFAULT: "var(--destructive)",
+          foreground: "var(--destructive-foreground)",
+        },
       },
       borderRadius: {
         DEFAULT: "var(--radius)",

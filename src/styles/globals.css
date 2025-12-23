@@ -2,24 +2,21 @@
 
 @plugin "tailwindcss-animate";
 
-:root {
-    --radius: 0.625rem;
-    --primary: #F15A24;
-    --primary-foreground: #FFFFFF;
-    --secondary: #000000;
-    --secondary-foreground: #FFFFFF;
-    --background: #FFFFFF;
-    --foreground: #111827;
-    --muted: #F3F4F6;
-    --muted-foreground: #6B7280;
-    /* ...остальные переменные как у вас сейчас... */
-}
+@theme {
+    --color-primary: #F15A24;
+    --color-primary-foreground: #FFFFFF;
+    --color-secondary: #000000;
+    --color-secondary-foreground: #FFFFFF;
+    --color-background: #FFFFFF;
+    --color-foreground: #111827;
+    --color-muted: #F3F4F6;
+    --color-muted-foreground: #6B7280;
+    --color-input: #E5E7EB;
+    --color-ring: #F15A24;
+    --color-destructive: #EF4444;
+    --color-destructive-foreground: #FFFFFF;
 
-@theme inline {
-    --color-background: var(--background);
-    --color-foreground: var(--foreground);
-    --color-primary: var(--primary);
-    /* ... */
+    --radius: 0.625rem;
 }
 
 @layer utilities {
@@ -53,13 +50,18 @@
 }
 
 @layer base {
-    * {
-
-    }
     html {
-               overflow-y: scroll;
+        overflow-y: scroll;
+        scrollbar-gutter: stable;
     }
+
     body {
         @apply bg-background text-foreground;
+    }
+
+    body[data-scroll-locked],
+    html[data-scroll-locked] {
+        padding-right: 0 !important;
+        margin-right: 0 !important;
     }
 }
