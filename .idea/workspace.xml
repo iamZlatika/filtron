@@ -4,20 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="49dcc720-8a1c-4638-8891-65dbcda4c085" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/public/delivery.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/order.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/parts.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/[locale]/thank-you/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/sections/thank-you/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/[locale]/autoparts/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/autoparts/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/sections/vin-order-form/helpers.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sections/vin-order-form/helpers.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/sections/vin-order-form/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sections/vin-order-form/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/input.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/input.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/i18n/dictionary/ru.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/i18n/dictionary/ru.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/i18n/dictionary/uk.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/i18n/dictionary/uk.json" afterDir="false" />
-    </list>
+    <list default="true" id="49dcc720-8a1c-4638-8891-65dbcda4c085" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

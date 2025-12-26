@@ -10,7 +10,7 @@ export const getYearsByDecade = (t: Dictionary): Record<string, number[]> => {
     years2020s.push(year);
   }
   if (years2020s.length > 0) {
-    decades[t.decades["2020"]] = years2020s;
+    decades[t.decade_2020] = years2020s;
   }
 
   // 2010-е / 2010-ті
@@ -18,32 +18,31 @@ export const getYearsByDecade = (t: Dictionary): Record<string, number[]> => {
   for (let year = 2019; year >= 2010; year--) {
     years2010s.push(year);
   }
-  decades[t.decades["2010"]] = years2010s;
+  decades[t.decade_2010] = years2010s;
 
   // 2000-е / 2000-ні
   const years2000s = [];
   for (let year = 2009; year >= 2000; year--) {
     years2000s.push(year);
   }
-  decades[t.decades["2000"]] = years2000s;
+  decades[t.decade_2000] = years2000s;
 
   // 1990-е / 1990-ті
   const years1990s = [];
   for (let year = 1999; year >= 1990; year--) {
     years1990s.push(year);
   }
-  decades[t.decades["1990"]] = years1990s;
+  decades[t.decade_1990] = years1990s;
 
   // 1980-е / 1980-ті
   const years1980s = [];
   for (let year = 1989; year >= 1980; year--) {
     years1980s.push(year);
   }
-  decades[t.decades["1980"]] = years1980s;
+  decades[t.decade_1980] = years1980s;
 
   return decades;
 };
-
 
 export const CAR_BRANDS: Record<string, string[]> = {
   A: ["Acura", "Alfa Romeo", "Audi", "Abarth", "Aston Martin"],
