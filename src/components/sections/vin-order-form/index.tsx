@@ -1,5 +1,6 @@
 "use client";
 
+import { useRouter } from "next/navigation";
 import { useForm, Controller } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import {
@@ -28,7 +29,10 @@ interface VinOrderFormProps {
 }
 
 const VinOrderForm = ({ locale, dictionary }: VinOrderFormProps) => {
+  const router = useRouter();
+
   const [formStartTime] = useState(Date.now());
+
   const {
     register,
     handleSubmit,
@@ -70,21 +74,32 @@ const VinOrderForm = ({ locale, dictionary }: VinOrderFormProps) => {
       return;
     }
 
-    const res = await fetch("/api/send-email", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    });
+    try {
+      const res = await fetch("/api/send-email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
 
-    if (!res.ok) {
-      throw new Error("Failed to send form");
+      if (!res.ok) {
+        throw new Error("Failed to send form");
+      }
+
+      // 🔐 Флаг успешной отправки
+      sessionStorage.setItem("form_submitted", "true");
+
+      // 🚀 Редирект на thank-you
+      router.push("/thank-you");
+    } catch (e) {
+      console.error(e);
+      // тут при желании можно показать toast / error state
     }
   };
 
   const t = dictionary;
-  const yearsByDecade = getYearsByDecade();
+  const yearsByDecade = getYearsByDecade(t);
 
   return (
     <form
@@ -99,6 +114,7 @@ const VinOrderForm = ({ locale, dictionary }: VinOrderFormProps) => {
           <Input
             {...register("vin")}
             placeholder={t.form_vin}
+            maxLength={17}
             className="md:h-12 md:text-base"
           />
           {errors.vin && (
@@ -122,7 +138,6 @@ const VinOrderForm = ({ locale, dictionary }: VinOrderFormProps) => {
             </p>
           )}
         </div>
-
         {/* Phone */}
         <div className="space-y-1 md:space-y-2">
           <Label className="md:text-base">
