@@ -17,6 +17,14 @@ export default function ThankYouClient({ t }: { t: any }) {
 
     setIsValidated(true);
 
+    // пушим событие в GTM
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      event: "thank_you_page_view",
+      page_name: "Thank You",
+    });
+
+    // удаляем токен через полсекунды
     const timer = setTimeout(() => {
       sessionStorage.removeItem("form_submitted");
     }, 500);
