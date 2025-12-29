@@ -1,5 +1,6 @@
 import Header from "@/components/layout/header";
 import { Metadata } from "next";
+import Footer from "@/components/layout/footer";
 
 export async function generateStaticParams() {
   return [{ locale: "uk" }, { locale: "ru" }];
@@ -37,6 +38,7 @@ export default async function LocaleLayout({
     <div className="">
       <Header />
       <div className="wrapper">{children}</div>
+      <Footer />
     </div>
   );
 }
