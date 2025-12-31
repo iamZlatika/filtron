@@ -49,10 +49,10 @@ export default async function ContactsPage({
           <div>
             <h3 className="text-lg font-semibold text-gray-900 mb-1">Email</h3>
             <a
-              href="mailto:filtron.zp.ua@gmail.com"
+              href="mailto:filtron.wix@gmail.com"
               className="text-gray-800 hover:text-primary transition-colors"
             >
-              filtron.zp.ua@gmail.com
+              filtron.wix@gmail.com
             </a>
           </div>
 
@@ -63,10 +63,11 @@ export default async function ContactsPage({
             </h3>
             <div className="flex items-center gap-3">
               <a
-                href="https://t.me/"
+                href="https://t.me/+380676172194"
                 target="_blank"
+                rel="noopener noreferrer"
                 aria-label="Telegram"
-                className="inline-flex"
+                className="inline-flex hover:opacity-80 transition-opacity"
               >
                 <Image
                   src="/telegram.svg"
@@ -75,8 +76,26 @@ export default async function ContactsPage({
                   alt="Telegram"
                 />
               </a>
-              <a href="#" aria-label="Viber" className="inline-flex">
+              <a
+                href="viber://chat?number=%2B380676172194"
+                aria-label="Viber"
+                className="inline-flex hover:opacity-80 transition-opacity"
+              >
                 <Image src="/viber.svg" width={24} height={24} alt="Viber" />
+              </a>
+              <a
+                href="https://wa.me/380996243042"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="WhatsApp"
+                className="inline-flex hover:opacity-80 transition-opacity"
+              >
+                <Image
+                  src="/whats-app.svg"
+                  width={24}
+                  height={24}
+                  alt="WhatsApp"
+                />
               </a>
             </div>
           </div>

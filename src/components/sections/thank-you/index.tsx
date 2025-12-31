@@ -36,7 +36,7 @@ export default function ThankYouClient({ t }: { t: any }) {
 
   return (
     <div>
-      <h1>{t.thank_you_text}</h1>
+      <h1 className="h1-bold mb-8">{t.thank_you_text}</h1>
       <div id="conversion-anchor" />
     </div>
   );

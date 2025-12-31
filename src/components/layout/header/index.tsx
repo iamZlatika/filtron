@@ -105,6 +105,18 @@ const Header = () => {
                 >
                   <Image src="/viber.svg" width={22} height={22} alt="Viber" />
                 </a>
+                <a
+                  href="https://wa.me/380996243042"
+                  target="_blank"
+                  aria-label="WhatsApp"
+                >
+                  <Image
+                    src="/whats-app.svg"
+                    width={22}
+                    height={22}
+                    alt="WhatsApp"
+                  />
+                </a>
               </div>
             </div>
           </div>
@@ -153,7 +165,11 @@ const Header = () => {
               </div>
 
               <div className="flex items-center gap-2 pl-2 border-l border-gray-200">
-                <a href="https://t.me/" target="_blank" aria-label="Telegram">
+                <a
+                  href="https://t.me/+380676172194"
+                  target="_blank"
+                  aria-label="Telegram"
+                >
                   <Image
                     src="/telegram.svg"
                     width={20}
@@ -161,9 +177,19 @@ const Header = () => {
                     alt="Telegram"
                   />
                 </a>
-                <a href="#" aria-label="WhatsApp">
+                <a
+                  href="viber://chat?number=%2B380676172194"
+                  aria-label="Viber"
+                >
+                  <Image src="/viber.svg" width={20} height={20} alt="Viber" />
+                </a>
+                <a
+                  href="https://wa.me/380996243042"
+                  target="_blank"
+                  aria-label="WhatsApp"
+                >
                   <Image
-                    src="/viber.svg"
+                    src="/whats-app.svg"
                     width={20}
                     height={20}
                     alt="WhatsApp"

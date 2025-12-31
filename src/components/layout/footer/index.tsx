@@ -127,6 +127,20 @@ const Footer = () => {
               >
                 <Image src="/viber.svg" width={32} height={32} alt="Viber" />
               </a>
+              <a
+                href="https://wa.me/380996243042"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="WhatsApp"
+                className="hover:opacity-80 transition-opacity"
+              >
+                <Image
+                  src="/whats-app.svg"
+                  width={32}
+                  height={32}
+                  alt="WhatsApp"
+                />
+              </a>
             </div>
             <div className="text-sm text-white/70">
               <p>
