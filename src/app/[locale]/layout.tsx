@@ -3,6 +3,7 @@ import Footer from "@/components/layout/footer";
 import { Metadata } from "next";
 import { ReactNode } from "react";
 import Script from "next/script";
+import Breadcrumbs from "@/components/layout/breadcrumb";
 
 export async function generateStaticParams() {
   return [{ locale: "uk" }, { locale: "ru" }];
@@ -61,7 +62,12 @@ export default async function LocaleLayout({
       </noscript>
 
       <Header />
-      <div className="wrapper">{children}</div>
+      <main className="flex-grow">
+        <div className="wrapper">
+          <Breadcrumbs />
+          {children}
+        </div>
+      </main>
       <Footer />
     </>
   );

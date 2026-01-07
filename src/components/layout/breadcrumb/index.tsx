@@ -11,6 +11,7 @@ import {
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
 import { useTranslations } from "@/hooks/useTranslations";
+import { Fragment } from "react";
 
 const titles: Record<string, string> = {
   "wix-filters": "navWix",
@@ -19,6 +20,9 @@ const titles: Record<string, string> = {
   "about-us": "navAboutUs",
   order: "orderTitle",
   autoparts: "navAutoparts",
+  "thank-you": "thank_you_text", // или добавить новый ключ в JSON
+  b2b: "b2b",
+  delivery: "delivery",
 };
 
 function formatSegment(seg: string) {
@@ -72,15 +76,30 @@ export default function Breadcrumbs() {
             <Link href={`/${locale}`}>{t.breadHome}</Link>
           </BreadcrumbLink>
         </BreadcrumbItem>
+        {pathSegments.map((segment, index) => {
+          const href =
+            `/${locale}/` + pathSegments.slice(0, index + 1).join("/");
+          const isLast = index === pathSegments.length - 1;
 
-        {items.length > 0 && <BreadcrumbSeparator />}
+          const label = titles[segment]
+            ? t[titles[segment] as keyof typeof t] || formatSegment(segment)
+            : formatSegment(segment);
 
-        {items.map((item, i) => (
-          <div key={i} className="flex items-center">
-            {item}
-            {i < items.length - 1 && <BreadcrumbSeparator />}
-          </div>
-        ))}
+          return (
+            <Fragment key={href}>
+              <BreadcrumbSeparator />
+              <BreadcrumbItem>
+                {isLast ? (
+                  <BreadcrumbPage>{label}</BreadcrumbPage>
+                ) : (
+                  <BreadcrumbLink asChild>
+                    <Link href={href}>{label}</Link>
+                  </BreadcrumbLink>
+                )}
+              </BreadcrumbItem>
+            </Fragment>
+          );
+        })}
       </BreadcrumbList>
     </Breadcrumb>
   );
