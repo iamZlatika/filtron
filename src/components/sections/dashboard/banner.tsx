@@ -1,12 +1,13 @@
-"use client";
-
 import Image from "next/image";
 import ActionBtn from "@/components/layout/action-btn";
-import { useTranslations } from "@/hooks/useTranslations";
+import { Dictionary } from "@/lib/i18n/getDictionary";
 
-const Banner = () => {
-  const { dict: t } = useTranslations();
+interface BannerProps {
+  t: Dictionary;
+  locale: string;
+}
 
+const Banner = ({ locale, t }: BannerProps) => {
   return (
     <div className="mx-auto w-full max-w-[1920px] bg-white">
       <div className="flex flex-col md:flex-row h-auto md:h-[600px] w-full items-center">
@@ -16,14 +17,14 @@ const Banner = () => {
             <p className="text-black text-xl md:text-2xl lg:text-3xl leading-snug">
               {t.bannerTitle}
             </p>
-            <ActionBtn title={t.bannerVin} />
+            <ActionBtn title={t.bannerVin} locale={locale} />
           </div>
         </div>
 
         {/* Right: image ~50% */}
         <div className="w-full md:w-1/2 w-1/2 h-full flex items-center justify-end overflow-hidden">
           <Image
-            src="/banner.png"
+            src="/banner.webp"
             alt="Banner"
             width={900}
             height={600}

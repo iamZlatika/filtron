@@ -69,38 +69,40 @@ export default function Breadcrumbs() {
   });
 
   return (
-    <Breadcrumb className="mb-4">
-      <BreadcrumbList>
-        <BreadcrumbItem>
-          <BreadcrumbLink asChild>
-            <Link href={`/${locale}`}>{t.breadHome}</Link>
-          </BreadcrumbLink>
-        </BreadcrumbItem>
-        {pathSegments.map((segment, index) => {
-          const href =
-            `/${locale}/` + pathSegments.slice(0, index + 1).join("/");
-          const isLast = index === pathSegments.length - 1;
+    <nav aria-label="Breadcrumb">
+      <Breadcrumb className="mb-4">
+        <BreadcrumbList>
+          <BreadcrumbItem>
+            <BreadcrumbLink asChild>
+              <Link href={`/${locale}`}>{t.breadHome}</Link>
+            </BreadcrumbLink>
+          </BreadcrumbItem>
+          {pathSegments.map((segment, index) => {
+            const href =
+              `/${locale}/` + pathSegments.slice(0, index + 1).join("/");
+            const isLast = index === pathSegments.length - 1;
 
-          const label = titles[segment]
-            ? t[titles[segment] as keyof typeof t] || formatSegment(segment)
-            : formatSegment(segment);
+            const label = titles[segment]
+              ? t[titles[segment] as keyof typeof t] || formatSegment(segment)
+              : formatSegment(segment);
 
-          return (
-            <Fragment key={href}>
-              <BreadcrumbSeparator />
-              <BreadcrumbItem>
-                {isLast ? (
-                  <BreadcrumbPage>{label}</BreadcrumbPage>
-                ) : (
-                  <BreadcrumbLink asChild>
-                    <Link href={href}>{label}</Link>
-                  </BreadcrumbLink>
-                )}
-              </BreadcrumbItem>
-            </Fragment>
-          );
-        })}
-      </BreadcrumbList>
-    </Breadcrumb>
+            return (
+              <Fragment key={href}>
+                <BreadcrumbSeparator />
+                <BreadcrumbItem>
+                  {isLast ? (
+                    <BreadcrumbPage>{label}</BreadcrumbPage>
+                  ) : (
+                    <BreadcrumbLink asChild>
+                      <Link href={href}>{label}</Link>
+                    </BreadcrumbLink>
+                  )}
+                </BreadcrumbItem>
+              </Fragment>
+            );
+          })}
+        </BreadcrumbList>
+      </Breadcrumb>
+    </nav>
   );
 }

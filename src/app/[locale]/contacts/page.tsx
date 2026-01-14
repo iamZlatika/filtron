@@ -1,6 +1,21 @@
 import InteractiveStoreMap from "@/components/sections/contacts/google-map";
 import { getDictionary } from "@/lib/i18n/getDictionary";
 import Image from "next/image";
+import { Metadata } from "next";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: { locale: "uk" | "ru" };
+}): Promise<Metadata> {
+  const { locale } = params;
+  const t = getDictionary(locale);
+
+  return {
+    title: t.meta_title_contacts,
+    description: t.meta_description_contacts,
+  };
+}
 
 export default async function ContactsPage({
   params,
@@ -15,7 +30,7 @@ export default async function ContactsPage({
       <h1 className="h1-bold">{t.contactsTitle}</h1>
 
       <section className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 items-start">
-        <div className="md:col-span-1 flex flex-col gap-5">
+        <address className="md:col-span-1 flex flex-col gap-5">
           {/* Address */}
           <div>
             <h3 className="text-lg font-semibold text-gray-900 mb-1">
@@ -99,7 +114,7 @@ export default async function ContactsPage({
               </a>
             </div>
           </div>
-        </div>
+        </address>
 
         {/* Right: map */}
         <div className="md:col-span-2">

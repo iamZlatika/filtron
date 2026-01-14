@@ -80,6 +80,23 @@
   "about_us_subtitle1": "Поставщики и гарантии",
   "about_us_subtitle2": "Заказ запчастей",
   "about_us_subtitle3": "Доставка по регионам",
-  "about_us_subtitle4": "Всегда в наличии"
+  "about_us_subtitle4": "Всегда в наличии",
+
+  "meta_title_layout": "Магазин автозапчастей в Запорожье | Filtron",
+  "meta_description_layout": "Магазин автозапчастей и автомобильных фильтров в Запорожье. Помогаем с подбором деталей для авто и предоставляем консультации.",
+  "meta_title_about_us": "О нас | Магазин автозапчастей Filtron",
+  "meta_description_about_us": "Узнайте больше о магазине Фильтрон. Поставляем автозапчасти и фильтры WIX в Запорожье с 1997 года.",
+  "meta_title_autoparts": "Автозапчасти EU и USA | Filtron",
+  "meta_description_autoparts": "Оригинальные и аналоговые автозапчасти из Европы и США. Помощь с подбором под ваш автомобиль.",
+  "meta_title_wix_filters": "Фильтры WIX для авто | Filtron",
+  "meta_description_wix_filters": "Каталог автомобильных фильтров WIX: масляные, воздушные, топливные и салонные. Проверенное качество.",
+  "meta_title_services": "Услуги по подбору автозапчастей | Filtron",
+  "meta_description_services": "Профессиональный подбор автозапчастей и фильтров по VIN-коду. Консультации и помощь клиентам.",
+  "meta_title_contacts": "Контакты | Filtron Запорожье",
+  "meta_description_contacts": "Контактная информация магазина Filtron в Запорожье. Телефон, адрес и обратная связь.",
+
+  "footer_schedule": "Пн-Пт: 9:00 - 16:30",
+  "footer_schedule_saturday": "Сб: 9:00 - 12:00",
+  "footer_schedule_sunday": "Вс: выходной"
 
 }

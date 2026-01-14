@@ -4,6 +4,7 @@ import { Metadata } from "next";
 import { ReactNode } from "react";
 import Script from "next/script";
 import Breadcrumbs from "@/components/layout/breadcrumb";
+import { getDictionary } from "@/lib/i18n/getDictionary";
 
 export async function generateStaticParams() {
   return [{ locale: "uk" }, { locale: "ru" }];
@@ -15,9 +16,13 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
+  const t = getDictionary(locale);
+
   const baseUrl = "https://filtron.zp.ua";
 
   return {
+    title: t.meta_title_layout,
+    description: t.meta_description_layout,
     alternates: {
       canonical: locale === "uk" ? baseUrl : `${baseUrl}/ru`,
       languages: {
@@ -37,6 +42,7 @@ export default async function LocaleLayout({
   params: Promise<{ locale: string }>;
 }>) {
   const { locale } = await params;
+  const t = getDictionary(locale);
 
   return (
     <>
@@ -61,14 +67,14 @@ export default async function LocaleLayout({
         ></iframe>
       </noscript>
 
-      <Header />
-      <main className="flex-grow">
+      <Header locale={locale} t={t} />
+      <main className="grow">
         <div className="wrapper">
           <Breadcrumbs />
           {children}
         </div>
       </main>
-      <Footer />
+      <Footer locale={locale} t={t} />
     </>
   );
 }

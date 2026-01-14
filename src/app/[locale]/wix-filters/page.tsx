@@ -1,5 +1,20 @@
 import Image from "next/image";
 import { getDictionary } from "@/lib/i18n/getDictionary";
+import { Metadata } from "next";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: { locale: "uk" | "ru" };
+}): Promise<Metadata> {
+  const { locale } = params;
+  const t = getDictionary(locale);
+
+  return {
+    title: t.meta_title_wix_filters,
+    description: t.meta_description_wix_filters,
+  };
+}
 
 export default async function WixFiltersPage({
   params,
@@ -18,7 +33,7 @@ export default async function WixFiltersPage({
       <section className="grid grid-cols-1 md:grid-cols-9 items-center gap-4 md:gap-6 mt-4 md:mt-6">
         <div className="flex justify-center md:justify-start md:col-span-2">
           <Image
-            src="/wix_logo.jpg"
+            src="/wix-logo.webp"
             alt="WIX logo"
             width={420}
             height={260}
@@ -43,7 +58,7 @@ export default async function WixFiltersPage({
         </div>
         <div className="flex justify-center md:justify-end md:col-span-2">
           <Image
-            src="/wix-filters1.jpg"
+            src="/wix-filters1.webp"
             alt="WIX filters set 1"
             width={700}
             height={500}
@@ -57,7 +72,7 @@ export default async function WixFiltersPage({
       <section className="grid grid-cols-1 md:grid-cols-9 items-center gap-4 md:gap-6">
         <div className="order-1 md:order-none flex justify-center md:justify-start md:col-span-2">
           <Image
-            src="/wix-filters2.jpg"
+            src="/wix-filters2.webp"
             alt="WIX filters set 2"
             width={700}
             height={500}

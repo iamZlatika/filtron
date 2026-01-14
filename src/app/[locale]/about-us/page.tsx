@@ -1,5 +1,22 @@
 import Image from "next/image";
 import { getDictionary } from "@/lib/i18n/getDictionary";
+import { Metadata } from "next";
+
+
+export async function generateMetadata({
+  params,
+}: {
+  params: { locale: "uk" | "ru" };
+}): Promise<Metadata> {
+  const { locale } = params;
+  const t = getDictionary(locale);
+
+  return {
+    title: t.meta_title_about_us,
+    description: t.meta_description_about_us,
+  };
+}
+
 
 export default async function AboutUsPage({
   params,
@@ -18,7 +35,7 @@ export default async function AboutUsPage({
       <section className="grid grid-cols-1 md:grid-cols-9 items-center gap-4 md:gap-6 mt-4 md:mt-6">
         <div className="flex justify-center md:justify-start md:col-span-3">
           <Image
-            src="/shop.jpg"
+            src="/shop.webp"
             alt="shop"
             width={420}
             height={260}
@@ -54,7 +71,7 @@ export default async function AboutUsPage({
         </div>
         <div className="flex justify-center md:justify-end md:col-span-3">
           <Image
-            src="/shop_inside.jpg"
+            src="/shop_inside.webp"
             alt="shop_inside"
             width={700}
             height={500}

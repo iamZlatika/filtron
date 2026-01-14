@@ -5,10 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="49dcc720-8a1c-4638-8891-65dbcda4c085" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/app/[locale]/sitemap.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/db/prisma.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/[locale]/about-us/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/about-us/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/[locale]/autoparts/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/autoparts/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/[locale]/contacts/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/contacts/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/[locale]/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/[locale]/order/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/order/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/[locale]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layout/action-btn/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/action-btn/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/layout/breadcrumb/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/breadcrumb/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layout/footer/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/footer/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layout/header/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/header/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layout/header/navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/header/navbar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/sections/dashboard/banner.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sections/dashboard/banner.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/sections/dashboard/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sections/dashboard/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/sections/vin-order-form/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sections/vin-order-form/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/i18n/dictionary/ru.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/i18n/dictionary/ru.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/i18n/dictionary/uk.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/i18n/dictionary/uk.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/utils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/utils.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,12 +35,24 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="86" />
+    <option name="cachedIndexableFilesCount" value="100" />
     <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;iamZlatika&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;git@github.com:iamZlatika/filtron.git&quot;,
+    &quot;accountId&quot;: &quot;a2f33a80-fa94-4620-900c-89e12b8d0f0f&quot;
+  }
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
 }</component>
@@ -127,7 +158,12 @@
       <workItem from="1767182448652" duration="2636000" />
       <workItem from="1767614460716" duration="1749000" />
       <workItem from="1767639789835" duration="765000" />
-      <workItem from="1767782038654" duration="610000" />
+      <workItem from="1767782038654" duration="1250000" />
+      <workItem from="1767890218414" duration="1381000" />
+      <workItem from="1767891628159" duration="670000" />
+      <workItem from="1768212043760" duration="763000" />
+      <workItem from="1768321450857" duration="4474000" />
+      <workItem from="1768381515995" duration="5647000" />
     </task>
     <servers />
   </component>
@@ -161,7 +197,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/components/layout/header/index.tsx</url>
-          <line>99</line>
+          <line>105</line>
           <option name="timeStamp" value="10" />
         </line-breakpoint>
       </breakpoints>

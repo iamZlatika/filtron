@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { cn } from "@/lib/utils";
+import { cn, getLocalizedHref } from "@/lib/utils";
 import { useTranslations } from "@/hooks/useTranslations";
 import type { Dictionary } from "@/lib/i18n/getDictionary";
 
@@ -22,10 +22,7 @@ const Navbar = () => {
     <nav aria-label="navigation" className="max-w-full">
       <ul className="flex items-center overflow-x-auto md:whitespace-nowrap">
         {links.map((item, idx) => {
-          // Формируем правильный href с учетом локали
-          const fullHref = locale === "ru" ? `/ru${item.href}` : item.href;
-
-          // Проверяем, активна ли текущая ссылка
+          const fullHref = getLocalizedHref(item.href, locale);
           const isActive = pathname === fullHref;
 
           return (

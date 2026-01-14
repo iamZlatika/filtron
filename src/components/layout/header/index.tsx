@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useTranslations } from "@/hooks/useTranslations";
 import { APP_NAME } from "@/lib/constants";
 import { MapPin, Phone, Menu } from "lucide-react";
 import Navbar from "@/components/layout/header/navbar";
@@ -10,9 +9,13 @@ import ActionBtn from "@/components/layout/action-btn";
 import { LanguageSwitcher } from "@/components/layout/header/language-switcher";
 import { useState } from "react";
 import MobileNav from "@/components/layout/header/mobile-nav";
+import { Dictionary } from "@/lib/i18n/getDictionary";
 
-const Header = () => {
-  const { dict: t, locale } = useTranslations();
+interface HeaderProps {
+  locale: string;
+  t: Dictionary;
+}
+const Header = ({ locale, t }: HeaderProps) => {
   const homeLink = locale === "ru" ? "/ru" : "/";
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -39,19 +42,22 @@ const Header = () => {
               </span>
 
               {/* Address */}
-              <div className="flex items-center gap-2 pl-4 min-w-0">
+              <address className="flex items-center gap-2 pl-4 min-w-0 not-italic">
                 <a
                   href="https://www.google.com/maps?newwindow=1&sca_esv=0d39acdbfaa95ae9&output=search&q=%D0%BC.+%D0%97%D0%B0%D0%BF%D0%BE%D1%80%D1%96%D0%B6%D0%B6%D1%8F,+%D0%B2%D1%83%D0%BB.+%D0%A2%D1%80%D0%BE%D1%97%D1%86%D1%8C%D0%BA%D0%B0,+18/1&source=lnms&fbs=AIIjpHz6rxOFWsZjqtCJ84pWShUOk1D6SDcnv9maJfu4MgHP4IVVZjB4XyyP8cogXUcg9MgpPe53tWhiCz94zrTDlXqD0EX8Ycgucb3hprBIxOm8GZlxccobTkchfVCofTKffiMSxiZYK_HkgM9w0MqltYosc85FqN6j5yZvuqhYGa-YUsLOSB8vJB4lupfMuosUe-SC7THKLbW3NxUnwCIXpCRF2Sl574Udz50AJlgZEPlR8v5QQD7CQl-Iw1Ggc7olVrYkZ7iDCcmM8LVY_I6Sx864BJlh9A&entry=mc&ved=1t:200715&ictx=111"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 pl-4 min-w-0"
                 >
-                  <MapPin className="w-5 h-5 text-primary shrink-0" />
+                  <MapPin
+                    className="w-5 h-5 text-primary shrink-0"
+                    aria-hidden="true"
+                  />
                   <span className="truncate text-sm md:text-base text-white/90">
                     {t.address}
                   </span>
                 </a>
-              </div>
+              </address>
             </div>
 
             {/* Language Switch */}
@@ -67,21 +73,21 @@ const Header = () => {
 
             {/* CTA + phones */}
             <div className="flex items-center gap-3 md:gap-5">
-              <ActionBtn title={t.actionBtn} />
+              <ActionBtn title={t.actionBtn} locale={locale} />
 
               <div className="flex flex-col items-end gap-1 text-sm md:text-base leading-tight">
                 <a
                   href="tel:+380676172194"
                   className="group inline-flex items-center gap-2 hover:text-primary transition-colors"
                 >
-                  <Phone className="w-4 h-4" />
+                  <Phone className="w-4 h-4" aria-hidden="true" />
                   <span>(067)6172194</span>
                 </a>
                 <a
                   href="tel:+380996243042"
                   className="group inline-flex items-center gap-2 hover:text-primary transition-colors"
                 >
-                  <Phone className="w-4 h-4" />
+                  <Phone className="w-4 h-4" aria-hidden="true" />
                   <span>(099)6243042</span>
                 </a>
               </div>
@@ -213,7 +219,7 @@ const Header = () => {
         <div className="w-full bg-white border-b border-gray-200">
           <div className="px-4 py-3 flex items-center justify-between gap-3">
             {/* Left: Address with Icon in Center */}
-            <div className="flex items-center gap-2 flex-1">
+            <address className="flex items-center gap-2 flex-1 not-italic">
               <MapPin className="w-4 h-4 text-primary shrink-0 self-center" />
               <div className="flex flex-col text-xs text-gray-700 leading-tight">
                 <a
@@ -226,10 +232,10 @@ const Header = () => {
                   <span>{street}</span>
                 </a>
               </div>
-            </div>
+            </address>
 
             {/* Right: CTA Button */}
-            <ActionBtn title={t.actionBtn} />
+            <ActionBtn title={t.actionBtn} locale={locale} />
           </div>
         </div>
 

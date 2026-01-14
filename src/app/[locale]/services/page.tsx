@@ -1,6 +1,21 @@
 import Image from "next/image";
 import Link from "next/link";
 import { getDictionary } from "@/lib/i18n/getDictionary";
+import { Metadata } from "next";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: { locale: "uk" | "ru" };
+}): Promise<Metadata> {
+  const { locale } = params;
+  const t = getDictionary(locale);
+
+  return {
+    title: t.meta_title_services,
+    description: t.meta_description_services,
+  };
+}
 
 export default async function ServicesPage({
   params,
@@ -12,19 +27,19 @@ export default async function ServicesPage({
 
   const services = [
     {
-      src: "/b2b.jpg",
+      src: "/b2b-services.webp",
       alt: "b2b",
       text: t.b2b,
       href: `/${locale}/services/b2b`,
     },
     {
-      src: "/order_autoparts.jpg",
+      src: "/autoparts-services.webp",
       alt: "order_autoparts",
       text: t.orderAutoparts,
       href: `/${locale}/services/order`,
     },
     {
-      src: "/delivery.jpg",
+      src: "/delivery-services.webp",
       alt: "delivery",
       text: t.delivery,
       href: `/${locale}/services/delivery`,

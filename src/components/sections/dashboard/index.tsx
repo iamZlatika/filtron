@@ -1,9 +1,15 @@
 import Banner from "@/components/sections/dashboard/banner";
+import { Dictionary } from "@/lib/i18n/getDictionary";
 
-const Dashboard = () => {
+interface DashboardProps {
+  locale: string;
+  t: Dictionary;
+}
+
+const Dashboard = ({ t, locale }: DashboardProps) => {
   return (
     <div>
-      <Banner />
+      <Banner t={t} locale={locale} />
     </div>
   );
 };

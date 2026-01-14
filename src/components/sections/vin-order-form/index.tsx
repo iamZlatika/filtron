@@ -19,7 +19,7 @@ import {
   CAR_BRANDS,
   getYearsByDecade,
 } from "@/components/sections/vin-order-form/helpers";
-import { useState } from "react";
+import { useMemo, useState } from "react";
 
 type Dictionary = ReturnType<typeof getDictionary>;
 
@@ -99,7 +99,7 @@ const VinOrderForm = ({ locale, dictionary }: VinOrderFormProps) => {
   };
 
   const t = dictionary;
-  const yearsByDecade = getYearsByDecade(t);
+  const yearsByDecade = useMemo(() => getYearsByDecade(t), [t]);
 
   return (
     <form

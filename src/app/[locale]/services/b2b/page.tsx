@@ -13,14 +13,13 @@ export default async function B2bPage({
       <h3>{t.b2b}</h3>
       <div>
         <Image
-          src="/corporative.jpg"
+          src="/corporative.webp"
           alt="corporative"
           width={350}
           height={230}
           className="object-cover transition-transform duration-500 ease-out group-hover:scale-110"
         />
       </div>
-      p
     </div>
   );
 }
