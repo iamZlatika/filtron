@@ -35,7 +35,7 @@ export async function POST(req: Request) {
     const validationResult = schema.safeParse(data);
 
     if (!validationResult.success) {
-      console.log("Validation errors:", validationResult.error.flatten());
+      console.log("Validation errors:", validationResult.error.message);
       return Response.json({ error: "Invalid payload" }, { status: 400 });
     }
 

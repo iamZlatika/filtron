@@ -51,7 +51,9 @@ export const AnyNull = runtime.AnyNull
 
 
 export const ModelName = {
-  News: 'News'
+  News: 'News',
+  User: 'User',
+  LoginAttempt: 'LoginAttempt'
 } as const
 
 export type ModelName = (typeof ModelName)[keyof typeof ModelName]
@@ -72,13 +74,34 @@ export type TransactionIsolationLevel = (typeof TransactionIsolationLevel)[keyof
 
 export const NewsScalarFieldEnum = {
   id: 'id',
-  title: 'title',
-  text: 'text',
+  title_uk: 'title_uk',
+  text_uk: 'text_uk',
+  title_ru: 'title_ru',
+  text_ru: 'text_ru',
   createdAt: 'createdAt',
   updatedAt: 'updatedAt'
 } as const
 
 export type NewsScalarFieldEnum = (typeof NewsScalarFieldEnum)[keyof typeof NewsScalarFieldEnum]
+
+
+export const UserScalarFieldEnum = {
+  id: 'id',
+  login: 'login',
+  password: 'password'
+} as const
+
+export type UserScalarFieldEnum = (typeof UserScalarFieldEnum)[keyof typeof UserScalarFieldEnum]
+
+
+export const LoginAttemptScalarFieldEnum = {
+  id: 'id',
+  ip: 'ip',
+  count: 'count',
+  lastAttempt: 'lastAttempt'
+} as const
+
+export type LoginAttemptScalarFieldEnum = (typeof LoginAttemptScalarFieldEnum)[keyof typeof LoginAttemptScalarFieldEnum]
 
 
 export const SortOrder = {

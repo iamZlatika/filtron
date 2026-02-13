@@ -5,29 +5,37 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="49dcc720-8a1c-4638-8891-65dbcda4c085" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/app/[locale]/sitemap.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/db/prisma.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/guidelines/AI_GUIDELINES.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/prisma/seed.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/actions/news.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/actions/services.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/(admin)/admin-news/layout.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/(admin)/admin-news/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/sections/admin-panel/modal.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/sections/admin-panel/news-form.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/sections/admin-panel/news-table/news-table.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/sections/admin-panel/news-table/table-row.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/schemas/news.schema.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/news.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/[locale]/about-us/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/about-us/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/[locale]/autoparts/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/autoparts/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/[locale]/contacts/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/contacts/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/[locale]/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/[locale]/order/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/order/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/[locale]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prisma.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/prisma.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prisma/generated/internal/class.ts" beforeDir="false" afterPath="$PROJECT_DIR$/prisma/generated/internal/class.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prisma/generated/internal/prismaNamespace.ts" beforeDir="false" afterPath="$PROJECT_DIR$/prisma/generated/internal/prismaNamespace.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prisma/generated/internal/prismaNamespaceBrowser.ts" beforeDir="false" afterPath="$PROJECT_DIR$/prisma/generated/internal/prismaNamespaceBrowser.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prisma/generated/models/News.ts" beforeDir="false" afterPath="$PROJECT_DIR$/prisma/generated/models/News.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prisma/schema.prisma" beforeDir="false" afterPath="$PROJECT_DIR$/prisma/schema.prisma" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/[locale]/admin-news/page.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/api/send-email/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/send-email/route.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/layout/action-btn/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/action-btn/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/layout/breadcrumb/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/breadcrumb/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/layout/footer/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/footer/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/layout/header/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/header/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/layout/header/navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/header/navbar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/sections/dashboard/banner.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sections/dashboard/banner.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/sections/dashboard/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sections/dashboard/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/sections/thank-you/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sections/thank-you/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/sections/vin-order-form/helpers.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sections/vin-order-form/helpers.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/sections/vin-order-form/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sections/vin-order-form/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/i18n/dictionary/ru.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/i18n/dictionary/ru.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/i18n/dictionary/uk.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/i18n/dictionary/uk.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/utils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/utils.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/input.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/input.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/proxy.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/proxy.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,7 +43,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="100" />
+    <option name="cachedIndexableFilesCount" value="117" />
     <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
   </component>
   <component name="Git.Settings">
@@ -53,6 +61,10 @@
     &quot;accountId&quot;: &quot;a2f33a80-fa94-4620-900c-89e12b8d0f0f&quot;
   }
 }</component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
 }</component>
@@ -61,34 +73,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;javascript.preferred.runtime.type.id&quot;: &quot;node&quot;,
-    &quot;js.debugger.nextJs.config.created.client&quot;: &quot;true&quot;,
-    &quot;js.debugger.nextJs.config.created.server&quot;: &quot;true&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/zlata/home/zlatika/work/filtron/public&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/home/zlata/home/zlatika/work/filtron/node_modules/prettier&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.junie&quot;,
-    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/home/zlata/home/zlatika/work/filtron/node_modules/typescript/lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "main",
+    "javascript.preferred.runtime.type.id": "node",
+    "js.debugger.nextJs.config.created.client": "true",
+    "js.debugger.nextJs.config.created.server": "true",
+    "junie.onboarding.icon.badge.shown": "true",
+    "last_opened_file_path": "/home/zlata/home/zlatika/work/filtron/public",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "prettierjs.PrettierConfiguration.Package": "/home/zlata/home/zlatika/work/filtron/node_modules/prettier",
+    "settings.editor.selected.configurable": "configurable.group.junie",
+    "to.speed.mode.migration.done": "true",
+    "ts.external.directory.path": "/home/zlata/home/zlatika/work/filtron/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/public" />
@@ -98,6 +111,8 @@
       <recent name="$PROJECT_DIR$/src/app/Services" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/actions" />
+      <recent name="$PROJECT_DIR$/src/components/sections/admin-panel/news-table" />
       <recent name="$PROJECT_DIR$/src/app" />
       <recent name="$PROJECT_DIR$/src/app/[locale]" />
       <recent name="$PROJECT_DIR$/src/styles" />
@@ -121,7 +136,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-c7e53b3be11b-JavaScript-WS-253.28294.332" />
+        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-WS-253.30387.83" />
       </set>
     </attachedChunks>
   </component>
@@ -164,6 +179,12 @@
       <workItem from="1768212043760" duration="763000" />
       <workItem from="1768321450857" duration="4474000" />
       <workItem from="1768381515995" duration="5647000" />
+      <workItem from="1768465009871" duration="14558000" />
+      <workItem from="1768559085265" duration="634000" />
+      <workItem from="1768992529067" duration="8339000" />
+      <workItem from="1769002436482" duration="14248000" />
+      <workItem from="1769509650419" duration="78000" />
+      <workItem from="1770974299248" duration="767000" />
     </task>
     <servers />
   </component>
@@ -199,6 +220,16 @@
           <url>file://$PROJECT_DIR$/src/components/layout/header/index.tsx</url>
           <line>105</line>
           <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/components/sections/admin-panel/news-form.tsx</url>
+          <line>2</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/actions/news.ts</url>
+          <line>1</line>
+          <option name="timeStamp" value="12" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

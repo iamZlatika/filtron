@@ -66,3 +66,7 @@ export const CAR_BRANDS: Record<string, string[]> = {
   V: ["Volkswagen", "Volvo"],
   Z: ["Zotye"],
 };
+
+export function stripHtml(input: string) {
+  return input.replace(/<[^>]*>?/gm, "").trim();
+}

@@ -20,6 +20,9 @@
 # production
 /build
 
+# junie
+/docs
+
 # misc
 .DS_Store
 *.pem

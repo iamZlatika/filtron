@@ -26,24 +26,30 @@ export type AggregateNews = {
 
 export type NewsMinAggregateOutputType = {
   id: string | null
-  title: string | null
-  text: string | null
+  title_uk: string | null
+  text_uk: string | null
+  title_ru: string | null
+  text_ru: string | null
   createdAt: Date | null
   updatedAt: Date | null
 }
 
 export type NewsMaxAggregateOutputType = {
   id: string | null
-  title: string | null
-  text: string | null
+  title_uk: string | null
+  text_uk: string | null
+  title_ru: string | null
+  text_ru: string | null
   createdAt: Date | null
   updatedAt: Date | null
 }
 
 export type NewsCountAggregateOutputType = {
   id: number
-  title: number
-  text: number
+  title_uk: number
+  text_uk: number
+  title_ru: number
+  text_ru: number
   createdAt: number
   updatedAt: number
   _all: number
@@ -52,24 +58,30 @@ export type NewsCountAggregateOutputType = {
 
 export type NewsMinAggregateInputType = {
   id?: true
-  title?: true
-  text?: true
+  title_uk?: true
+  text_uk?: true
+  title_ru?: true
+  text_ru?: true
   createdAt?: true
   updatedAt?: true
 }
 
 export type NewsMaxAggregateInputType = {
   id?: true
-  title?: true
-  text?: true
+  title_uk?: true
+  text_uk?: true
+  title_ru?: true
+  text_ru?: true
   createdAt?: true
   updatedAt?: true
 }
 
 export type NewsCountAggregateInputType = {
   id?: true
-  title?: true
-  text?: true
+  title_uk?: true
+  text_uk?: true
+  title_ru?: true
+  text_ru?: true
   createdAt?: true
   updatedAt?: true
   _all?: true
@@ -149,8 +161,10 @@ export type NewsGroupByArgs<ExtArgs extends runtime.Types.Extensions.InternalArg
 
 export type NewsGroupByOutputType = {
   id: string
-  title: string
-  text: string
+  title_uk: string
+  text_uk: string
+  title_ru: string
+  text_ru: string
   createdAt: Date
   updatedAt: Date
   _count: NewsCountAggregateOutputType | null
@@ -178,16 +192,20 @@ export type NewsWhereInput = {
   OR?: Prisma.NewsWhereInput[]
   NOT?: Prisma.NewsWhereInput | Prisma.NewsWhereInput[]
   id?: Prisma.StringFilter<"News"> | string
-  title?: Prisma.StringFilter<"News"> | string
-  text?: Prisma.StringFilter<"News"> | string
+  title_uk?: Prisma.StringFilter<"News"> | string
+  text_uk?: Prisma.StringFilter<"News"> | string
+  title_ru?: Prisma.StringFilter<"News"> | string
+  text_ru?: Prisma.StringFilter<"News"> | string
   createdAt?: Prisma.DateTimeFilter<"News"> | Date | string
   updatedAt?: Prisma.DateTimeFilter<"News"> | Date | string
 }
 
 export type NewsOrderByWithRelationInput = {
   id?: Prisma.SortOrder
-  title?: Prisma.SortOrder
-  text?: Prisma.SortOrder
+  title_uk?: Prisma.SortOrder
+  text_uk?: Prisma.SortOrder
+  title_ru?: Prisma.SortOrder
+  text_ru?: Prisma.SortOrder
   createdAt?: Prisma.SortOrder
   updatedAt?: Prisma.SortOrder
 }
@@ -197,16 +215,20 @@ export type NewsWhereUniqueInput = Prisma.AtLeast<{
   AND?: Prisma.NewsWhereInput | Prisma.NewsWhereInput[]
   OR?: Prisma.NewsWhereInput[]
   NOT?: Prisma.NewsWhereInput | Prisma.NewsWhereInput[]
-  title?: Prisma.StringFilter<"News"> | string
-  text?: Prisma.StringFilter<"News"> | string
+  title_uk?: Prisma.StringFilter<"News"> | string
+  text_uk?: Prisma.StringFilter<"News"> | string
+  title_ru?: Prisma.StringFilter<"News"> | string
+  text_ru?: Prisma.StringFilter<"News"> | string
   createdAt?: Prisma.DateTimeFilter<"News"> | Date | string
   updatedAt?: Prisma.DateTimeFilter<"News"> | Date | string
 }, "id">
 
 export type NewsOrderByWithAggregationInput = {
   id?: Prisma.SortOrder
-  title?: Prisma.SortOrder
-  text?: Prisma.SortOrder
+  title_uk?: Prisma.SortOrder
+  text_uk?: Prisma.SortOrder
+  title_ru?: Prisma.SortOrder
+  text_ru?: Prisma.SortOrder
   createdAt?: Prisma.SortOrder
   updatedAt?: Prisma.SortOrder
   _count?: Prisma.NewsCountOrderByAggregateInput
@@ -219,88 +241,110 @@ export type NewsScalarWhereWithAggregatesInput = {
   OR?: Prisma.NewsScalarWhereWithAggregatesInput[]
   NOT?: Prisma.NewsScalarWhereWithAggregatesInput | Prisma.NewsScalarWhereWithAggregatesInput[]
   id?: Prisma.StringWithAggregatesFilter<"News"> | string
-  title?: Prisma.StringWithAggregatesFilter<"News"> | string
-  text?: Prisma.StringWithAggregatesFilter<"News"> | string
+  title_uk?: Prisma.StringWithAggregatesFilter<"News"> | string
+  text_uk?: Prisma.StringWithAggregatesFilter<"News"> | string
+  title_ru?: Prisma.StringWithAggregatesFilter<"News"> | string
+  text_ru?: Prisma.StringWithAggregatesFilter<"News"> | string
   createdAt?: Prisma.DateTimeWithAggregatesFilter<"News"> | Date | string
   updatedAt?: Prisma.DateTimeWithAggregatesFilter<"News"> | Date | string
 }
 
 export type NewsCreateInput = {
   id?: string
-  title: string
-  text: string
+  title_uk: string
+  text_uk: string
+  title_ru: string
+  text_ru: string
   createdAt?: Date | string
   updatedAt?: Date | string
 }
 
 export type NewsUncheckedCreateInput = {
   id?: string
-  title: string
-  text: string
+  title_uk: string
+  text_uk: string
+  title_ru: string
+  text_ru: string
   createdAt?: Date | string
   updatedAt?: Date | string
 }
 
 export type NewsUpdateInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  title?: Prisma.StringFieldUpdateOperationsInput | string
-  text?: Prisma.StringFieldUpdateOperationsInput | string
+  title_uk?: Prisma.StringFieldUpdateOperationsInput | string
+  text_uk?: Prisma.StringFieldUpdateOperationsInput | string
+  title_ru?: Prisma.StringFieldUpdateOperationsInput | string
+  text_ru?: Prisma.StringFieldUpdateOperationsInput | string
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
 
 export type NewsUncheckedUpdateInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  title?: Prisma.StringFieldUpdateOperationsInput | string
-  text?: Prisma.StringFieldUpdateOperationsInput | string
+  title_uk?: Prisma.StringFieldUpdateOperationsInput | string
+  text_uk?: Prisma.StringFieldUpdateOperationsInput | string
+  title_ru?: Prisma.StringFieldUpdateOperationsInput | string
+  text_ru?: Prisma.StringFieldUpdateOperationsInput | string
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
 
 export type NewsCreateManyInput = {
   id?: string
-  title: string
-  text: string
+  title_uk: string
+  text_uk: string
+  title_ru: string
+  text_ru: string
   createdAt?: Date | string
   updatedAt?: Date | string
 }
 
 export type NewsUpdateManyMutationInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  title?: Prisma.StringFieldUpdateOperationsInput | string
-  text?: Prisma.StringFieldUpdateOperationsInput | string
+  title_uk?: Prisma.StringFieldUpdateOperationsInput | string
+  text_uk?: Prisma.StringFieldUpdateOperationsInput | string
+  title_ru?: Prisma.StringFieldUpdateOperationsInput | string
+  text_ru?: Prisma.StringFieldUpdateOperationsInput | string
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
 
 export type NewsUncheckedUpdateManyInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  title?: Prisma.StringFieldUpdateOperationsInput | string
-  text?: Prisma.StringFieldUpdateOperationsInput | string
+  title_uk?: Prisma.StringFieldUpdateOperationsInput | string
+  text_uk?: Prisma.StringFieldUpdateOperationsInput | string
+  title_ru?: Prisma.StringFieldUpdateOperationsInput | string
+  text_ru?: Prisma.StringFieldUpdateOperationsInput | string
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
 
 export type NewsCountOrderByAggregateInput = {
   id?: Prisma.SortOrder
-  title?: Prisma.SortOrder
-  text?: Prisma.SortOrder
+  title_uk?: Prisma.SortOrder
+  text_uk?: Prisma.SortOrder
+  title_ru?: Prisma.SortOrder
+  text_ru?: Prisma.SortOrder
   createdAt?: Prisma.SortOrder
   updatedAt?: Prisma.SortOrder
 }
 
 export type NewsMaxOrderByAggregateInput = {
   id?: Prisma.SortOrder
-  title?: Prisma.SortOrder
-  text?: Prisma.SortOrder
+  title_uk?: Prisma.SortOrder
+  text_uk?: Prisma.SortOrder
+  title_ru?: Prisma.SortOrder
+  text_ru?: Prisma.SortOrder
   createdAt?: Prisma.SortOrder
   updatedAt?: Prisma.SortOrder
 }
 
 export type NewsMinOrderByAggregateInput = {
   id?: Prisma.SortOrder
-  title?: Prisma.SortOrder
-  text?: Prisma.SortOrder
+  title_uk?: Prisma.SortOrder
+  text_uk?: Prisma.SortOrder
+  title_ru?: Prisma.SortOrder
+  text_ru?: Prisma.SortOrder
   createdAt?: Prisma.SortOrder
   updatedAt?: Prisma.SortOrder
 }
@@ -317,45 +361,55 @@ export type DateTimeFieldUpdateOperationsInput = {
 
 export type NewsSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
   id?: boolean
-  title?: boolean
-  text?: boolean
+  title_uk?: boolean
+  text_uk?: boolean
+  title_ru?: boolean
+  text_ru?: boolean
   createdAt?: boolean
   updatedAt?: boolean
 }, ExtArgs["result"]["news"]>
 
 export type NewsSelectCreateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
   id?: boolean
-  title?: boolean
-  text?: boolean
+  title_uk?: boolean
+  text_uk?: boolean
+  title_ru?: boolean
+  text_ru?: boolean
   createdAt?: boolean
   updatedAt?: boolean
 }, ExtArgs["result"]["news"]>
 
 export type NewsSelectUpdateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
   id?: boolean
-  title?: boolean
-  text?: boolean
+  title_uk?: boolean
+  text_uk?: boolean
+  title_ru?: boolean
+  text_ru?: boolean
   createdAt?: boolean
   updatedAt?: boolean
 }, ExtArgs["result"]["news"]>
 
 export type NewsSelectScalar = {
   id?: boolean
-  title?: boolean
-  text?: boolean
+  title_uk?: boolean
+  text_uk?: boolean
+  title_ru?: boolean
+  text_ru?: boolean
   createdAt?: boolean
   updatedAt?: boolean
 }
 
-export type NewsOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "title" | "text" | "createdAt" | "updatedAt", ExtArgs["result"]["news"]>
+export type NewsOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "title_uk" | "text_uk" | "title_ru" | "text_ru" | "createdAt" | "updatedAt", ExtArgs["result"]["news"]>
 
 export type $NewsPayload<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   name: "News"
   objects: {}
   scalars: runtime.Types.Extensions.GetPayloadResult<{
     id: string
-    title: string
-    text: string
+    title_uk: string
+    text_uk: string
+    title_ru: string
+    text_ru: string
     createdAt: Date
     updatedAt: Date
   }, ExtArgs["result"]["news"]>
@@ -782,8 +836,10 @@ export interface Prisma__NewsClient<T, Null = never, ExtArgs extends runtime.Typ
  */
 export interface NewsFieldRefs {
   readonly id: Prisma.FieldRef<"News", 'String'>
-  readonly title: Prisma.FieldRef<"News", 'String'>
-  readonly text: Prisma.FieldRef<"News", 'String'>
+  readonly title_uk: Prisma.FieldRef<"News", 'String'>
+  readonly text_uk: Prisma.FieldRef<"News", 'String'>
+  readonly title_ru: Prisma.FieldRef<"News", 'String'>
+  readonly text_ru: Prisma.FieldRef<"News", 'String'>
   readonly createdAt: Prisma.FieldRef<"News", 'DateTime'>
   readonly updatedAt: Prisma.FieldRef<"News", 'DateTime'>
 }

@@ -14,14 +14,13 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
-import { getDictionary } from "@/lib/i18n/getDictionary";
+import { Dictionary } from "@/lib/i18n/getDictionary";
 import {
   CAR_BRANDS,
   getYearsByDecade,
+  stripHtml,
 } from "@/components/sections/vin-order-form/helpers";
 import { useMemo, useState } from "react";
-
-type Dictionary = ReturnType<typeof getDictionary>;
 
 interface VinOrderFormProps {
   locale: "uk" | "ru";
@@ -74,13 +73,21 @@ const VinOrderForm = ({ locale, dictionary }: VinOrderFormProps) => {
       return;
     }
 
+    const safeData = {
+      ...data,
+      name: stripHtml(data.name ?? ""),
+      vin: stripHtml(data.vin ?? ""),
+      model: stripHtml(data.model ?? ""),
+      problem: stripHtml(data.problem),
+    };
+
     try {
       const res = await fetch("/api/send-email", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(data),
+        body: JSON.stringify(safeData),
       });
 
       if (!res.ok) {

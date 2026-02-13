@@ -11,11 +11,12 @@ interface IActionButton {
 const ActionButton = ({ title, locale }: IActionButton) => {
   const href = getLocalizedHref("/order", locale);
   return (
-    <Link href={href}>
-      <Button className="bg-primary text-white text-base md:text-lg h-9 md:h-10 px-4 py-2 rounded-md hover:bg-primary/90 transition-colors">
-        {title}
-      </Button>
-    </Link>
+    <Button
+      asChild
+      className="bg-primary text-white text-base md:text-lg h-9 md:h-10 px-4 py-2 rounded-md hover:bg-primary/90 transition-colors"
+    >
+      <Link href={href}> {title} </Link>
+    </Button>
   );
 };
 
