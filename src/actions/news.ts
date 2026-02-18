@@ -1,14 +1,15 @@
 "use server";
 
 import { revalidatePath } from "next/cache";
-import { newsService } from "@/services/news.service";
-import {
+
+import { normalizeError } from "@/actions/services";
+import type {
   ActionResponse,
-  createNewsSchema,
   News,
   NewsFormValues,
 } from "@/schemas/news.schema";
-import { normalizeError } from "@/actions/services";
+import { createNewsSchema } from "@/schemas/news.schema";
+import { newsService } from "@/services/news.service";
 
 export async function createNews(
   rawData: NewsFormValues,
@@ -56,6 +57,35 @@ export async function deleteNewsAction(
     await newsService.delete(id);
     revalidatePath("/admin-news", "page");
     return { success: true, data: undefined };
+  } catch (error: unknown) {
+    console.error("Fetch Error:", error);
+    return { success: false, error: normalizeError(error) };
+  }
+}
+export async function updateNews(
+  id: string,
+  rawData: NewsFormValues,
+): Promise<ActionResponse<News>> {
+  const validatedFields = createNewsSchema({
+    title_uk: "Заголовок обязателен (UA)",
+    text_uk: "Текст обязателен (UA)",
+    title_ru: "Заголовок обязателен (RU)",
+    text_ru: "Текст обязателен (RU)",
+  }).safeParse(rawData);
+
+  if (!validatedFields.success) {
+    return {
+      success: false,
+      error: "Неверные данные формы",
+    };
+  }
+
+  try {
+    const news = await newsService.update(id, validatedFields.data);
+
+    revalidatePath("/admin-news", "page");
+
+    return { success: true, data: news };
   } catch (error: unknown) {
     console.error("Fetch Error:", error);
     return { success: false, error: normalizeError(error) };

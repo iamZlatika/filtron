@@ -1,38 +1,63 @@
 "use client";
 
+import type { News } from "@prisma/client";
+import type { ReactNode } from "react";
+import { useState } from "react";
+
+import NewsForm from "@/components/sections/admin-panel/news-form";
+import { Button } from "@/components/ui/button";
 import {
   Dialog,
-  DialogClose,
   DialogContent,
   DialogHeader,
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import { Button } from "@/components/ui/button";
-import { NewsFormValues } from "@/schemas/news.schema";
-import NewsForm from "@/components/sections/admin-panel/news-form";
-import { useState } from "react";
+import type { ActionResponse, NewsFormValues } from "@/schemas/news.schema";
 
-interface AdminModalProps {
-  title: string;
-  action: (
-    values: NewsFormValues,
-  ) => Promise<{ success: boolean; data?: any; error?: string }>;
-  content?: NewsFormValues;
+type ActionResult<T> = Promise<ActionResponse<T>>;
+
+interface CreateProps<T> {
+  mode: "create";
+  title: ReactNode;
+  action: (values: NewsFormValues) => ActionResult<T>;
 }
-const AdminModalDialog = ({ title, action, content }: AdminModalProps) => {
+
+interface EditProps<T> {
+  mode: "edit";
+  title: ReactNode;
+  id: string;
+  content: NewsFormValues;
+  action: (id: string, values: NewsFormValues) => ActionResult<T>;
+}
+
+type AdminModalProps<T = News> = CreateProps<T> | EditProps<T>;
+
+const AdminModalDialog = <T,>(props: AdminModalProps<T>) => {
   const [open, setOpen] = useState(false);
+
+  const handleSubmit = (values: NewsFormValues) => {
+    if (props.mode === "edit") {
+      return props.action(props.id, values);
+    }
+
+    return props.action(values);
+  };
 
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
-        <Button>{title}</Button>
+        <Button>{props.title}</Button>
       </DialogTrigger>
       <DialogContent>
         <DialogHeader>
-          <DialogTitle>{title}</DialogTitle>
+          <DialogTitle>{props.title}</DialogTitle>
         </DialogHeader>
-        <NewsForm action={action} onSuccess={() => setOpen(false)} />
+        <NewsForm
+          action={handleSubmit}
+          onSuccess={() => setOpen(false)}
+          initialValues={props.mode === "edit" ? props.content : undefined}
+        />
       </DialogContent>
     </Dialog>
   );

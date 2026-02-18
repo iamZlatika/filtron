@@ -1,9 +1,11 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
 
-export default function ThankYouClient({ t }: { t: any }) {
+import type { Dictionary } from "@/lib/i18n/getDictionary";
+
+export function ThankYouClient({ t }: { t: Dictionary }) {
   const router = useRouter();
   const [isValidated, setIsValidated] = useState(false);
 
@@ -39,3 +41,5 @@ export default function ThankYouClient({ t }: { t: any }) {
     </div>
   );
 }
+
+export default ThankYouClient;

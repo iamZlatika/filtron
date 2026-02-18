@@ -1,5 +1,5 @@
 import { prisma } from "@/lib/db/prisma";
-import { NewsFormValues } from "@/schemas/news.schema";
+import type { NewsFormValues } from "@/schemas/news.schema";
 
 export const newsService = {
   async getAll() {
@@ -17,6 +17,13 @@ export const newsService = {
   async delete(id: string) {
     return prisma.news.delete({
       where: { id },
+    });
+  },
+
+  async update(id: string, data: NewsFormValues) {
+    return prisma.news.update({
+      where: { id },
+      data,
     });
   },
 };

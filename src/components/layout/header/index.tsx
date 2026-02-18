@@ -1,15 +1,16 @@
 "use client";
 
+import { MapPin, Menu, Phone } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { APP_NAME } from "@/lib/constants";
-import { MapPin, Phone, Menu } from "lucide-react";
-import Navbar from "@/components/layout/header/navbar";
+import { useState } from "react";
+
 import ActionBtn from "@/components/layout/action-btn";
 import { LanguageSwitcher } from "@/components/layout/header/language-switcher";
-import { useState } from "react";
 import MobileNav from "@/components/layout/header/mobile-nav";
-import { Dictionary } from "@/lib/i18n/getDictionary";
+import Navbar from "@/components/layout/header/navbar";
+import { APP_NAME } from "@/lib/constants";
+import type { Dictionary } from "@/lib/i18n/getDictionary";
 
 interface HeaderProps {
   locale: string;

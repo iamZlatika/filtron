@@ -1,25 +1,27 @@
 "use client";
 
+import { zodResolver } from "@hookform/resolvers/zod";
 import { useMemo, useTransition } from "react";
 import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
 
-import { Label } from "@/components/ui/label";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { DialogClose } from "@/components/ui/dialog";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Textarea } from "@/components/ui/textarea";
+import type { ActionResponse, NewsFormValues } from "@/schemas/news.schema";
+import { createNewsSchema } from "@/schemas/news.schema";
 
-import { createNewsSchema, NewsFormValues } from "@/schemas/news.schema";
-
-interface NewsFormProps {
-  action: (
-    values: NewsFormValues,
-  ) => Promise<{ success: boolean; data?: any; error?: string }>;
+interface NewsFormProps<T> {
+  action: (values: NewsFormValues) => Promise<ActionResponse<T>>;
   onSuccess?: () => void;
+  initialValues?: NewsFormValues;
 }
-
-const NewsForm = ({ action, onSuccess }: NewsFormProps) => {
+const NewsForm = <T,>({
+  action,
+  onSuccess,
+  initialValues,
+}: NewsFormProps<T>) => {
   const [isPending, startTransition] = useTransition();
 
   const schema = useMemo(
@@ -39,7 +41,7 @@ const NewsForm = ({ action, onSuccess }: NewsFormProps) => {
     formState: { errors },
   } = useForm<NewsFormValues>({
     resolver: zodResolver(schema),
-    defaultValues: {
+    defaultValues: initialValues || {
       title_uk: "",
       text_uk: "",
       title_ru: "",
@@ -145,7 +147,13 @@ const NewsForm = ({ action, onSuccess }: NewsFormProps) => {
           disabled={isPending}
           className="w-full md:w-auto md:h-12 md:px-8 md:text-base text-white"
         >
-          {isPending ? "Создание" : "Создать новость"}
+          {initialValues
+            ? isPending
+              ? "Сохранение"
+              : "Сохранить"
+            : isPending
+              ? "Создание"
+              : "Создать новость"}
         </Button>
 
         <DialogClose asChild>

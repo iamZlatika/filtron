@@ -1,6 +1,7 @@
-import { getDictionary } from "@/lib/i18n/getDictionary";
+import type { Metadata } from "next";
 import Image from "next/image";
-import { Metadata } from "next";
+
+import { getDictionary } from "@/lib/i18n/getDictionary";
 
 export async function generateMetadata({
   params,

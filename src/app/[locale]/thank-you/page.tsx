@@ -1,6 +1,5 @@
-
-import { getDictionary } from "@/lib/i18n/getDictionary";
 import ThankYouClient from "@/components/sections/thank-you";
+import { getDictionary } from "@/lib/i18n/getDictionary";
 
 export default async function ThankYouPage({
   params,

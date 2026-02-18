@@ -1,10 +1,9 @@
 "use client";
-import { News } from "@/schemas/news.schema";
-import {
-  NewsRow,
-  NewsRowData,
-} from "@/components/sections/admin-panel/news-table/table-row";
 import { List } from "react-window";
+
+import type { NewsRowData } from "@/components/sections/admin-panel/news-table/table-row";
+import NewsRow from "@/components/sections/admin-panel/news-table/table-row";
+import type { News } from "@/schemas/news.schema";
 
 interface NewsTableProps {
   news: News[];

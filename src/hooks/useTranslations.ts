@@ -1,12 +1,8 @@
 "use client";
 
 import { useParams } from "next/navigation";
-import {
-  getDictionary,
-  isLocale,
-  type Locale,
-  type Dictionary,
-} from "@/lib/i18n/getDictionary";
+
+import { getDictionary, isLocale } from "@/lib/i18n/getDictionary";
 
 export function useTranslations() {
   const params = useParams();

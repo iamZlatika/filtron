@@ -1,7 +1,8 @@
 "use client";
 
+import type { UseFormRegisterReturn } from "react-hook-form";
 import { useIMask } from "react-imask";
-import { UseFormRegisterReturn } from "react-hook-form";
+
 import { cn } from "@/lib/utils";
 
 type PhoneInputProps = {

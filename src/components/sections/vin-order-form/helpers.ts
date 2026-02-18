@@ -1,4 +1,4 @@
-import { Dictionary } from "@/lib/i18n/getDictionary";
+import type { Dictionary } from "@/lib/i18n/getDictionary";
 
 export const getYearsByDecade = (t: Dictionary): Record<string, number[]> => {
   const currentYear = new Date().getFullYear();

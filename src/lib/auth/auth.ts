@@ -1,7 +1,9 @@
-import { NextAuthOptions } from "next-auth";
-import CredentialsProvider from "next-auth/providers/credentials";
 import bcrypt from "bcryptjs";
+import type { NextAuthOptions } from "next-auth";
+import CredentialsProvider from "next-auth/providers/credentials";
+
 import { prisma } from "@/lib/db/prisma";
+
 import { checkRateLimit, resetRateLimit } from "./rate-limit";
 
 export const authOptions: NextAuthOptions = {
@@ -26,8 +28,14 @@ export const authOptions: NextAuthOptions = {
         if (!credentials?.login || !credentials?.password) {
           return null;
         }
-        const ip = (req as any).headers["x-forwarded-for"] || "127.0.0.1";
+        let ip = "127.0.0.1";
 
+        if (req?.headers) {
+          const forwarded = req.headers.get("x-forwarded-for");
+          if (forwarded) {
+            ip = forwarded.split(",")[0].trim();
+          }
+        }
         const { success } = await checkRateLimit(ip);
         if (!success) {
           throw new Error("Too many attempts. Please try again later.");
@@ -63,7 +71,7 @@ export const authOptions: NextAuthOptions = {
     },
     async session({ session, token }) {
       if (session.user) {
-        (session.user as any).id = token.id;
+        session.user.id = token.id;
       }
       return session;
     },

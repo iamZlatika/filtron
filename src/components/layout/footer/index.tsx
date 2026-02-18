@@ -1,8 +1,9 @@
-import Link from "next/link";
+import { Mail, MapPin, Phone } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
+
 import { APP_NAME } from "@/lib/constants";
-import { MapPin, Phone, Mail } from "lucide-react";
-import { Dictionary } from "@/lib/i18n/getDictionary";
+import type { Dictionary } from "@/lib/i18n/getDictionary";
 import { getLocalizedHref } from "@/lib/utils";
 
 interface FooterProps {

@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+
 import { useTranslations } from "@/hooks/useTranslations";
 import type { Locale } from "@/lib/i18n/getDictionary";
 
@@ -19,7 +20,7 @@ export function LanguageSwitcher() {
     const isUk = segments[1] === "uk";
 
     // Создаем копию сегментов для модификации
-    let newSegments = [...segments];
+    const newSegments = [...segments];
 
     if (newLocale === "ru") {
       if (isRu) return pathname; // Уже на RU

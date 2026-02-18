@@ -1,7 +1,7 @@
 interface GtmEvent {
   event: string;
   page_name?: string;
-  [key: string]: any;
+  [key: string]: unknown;
 }
 
 interface Window {

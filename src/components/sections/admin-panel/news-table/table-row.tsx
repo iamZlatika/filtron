@@ -1,11 +1,15 @@
-import { CSSProperties, ReactElement } from "react";
-import { News } from "@/schemas/news.schema";
+import { Pencil } from "lucide-react";
+import type { CSSProperties, ReactElement } from "react";
+
+import { updateNews } from "@/actions/news";
+import AdminModalDialog from "@/components/sections/admin-panel/modal";
+import DeleteNewsDialog from "@/components/sections/admin-panel/news-table/delete-dialog";
+import type { News } from "@/schemas/news.schema";
 
 export interface NewsRowData {
   items: News[];
 }
 
-// Определяем интерфейс пропсов точно в соответствии с react-window.d.ts
 export interface NewsRowProps extends NewsRowData {
   index: number;
   style: CSSProperties;
@@ -16,8 +20,7 @@ export interface NewsRowProps extends NewsRowData {
   };
 }
 
-// Экспортируем как обычную функцию для совместимости типов
-export const NewsRow = ({
+const NewsRow = ({
   index,
   style,
   items,
@@ -37,13 +40,18 @@ export const NewsRow = ({
       <div className="flex-1 p-4 text-muted-foreground">
         {new Date(news.createdAt).toLocaleDateString()}
       </div>
-      <div className="w-[100px] p-4 text-right">
-        <button className="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-8 w-8 text-destructive">
-          ✕
-        </button>
+      <div className="w-[400px] p-4 text-right flex items-center justify-end gap-2">
+        <AdminModalDialog
+          title={<Pencil />}
+          action={updateNews}
+          mode="edit"
+          id={news.id}
+          content={news}
+        />
+        <DeleteNewsDialog id={news.id} title={news.title_ru} />
       </div>
     </div>
   );
 };
 
-NewsRow.displayName = "NewsRow";
+export default NewsRow;

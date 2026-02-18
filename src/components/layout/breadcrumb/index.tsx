@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { Fragment } from "react";
+
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -11,7 +13,6 @@ import {
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
 import { useTranslations } from "@/hooks/useTranslations";
-import { Fragment } from "react";
 
 const titles: Record<string, string> = {
   "wix-filters": "navWix",
@@ -44,29 +45,6 @@ export default function Breadcrumbs() {
 
   // Пропускаем первый сегмент (локаль)
   const pathSegments = segments.slice(1);
-
-  const items = pathSegments.map((segment, index) => {
-    // Формируем href с учетом локали
-    const href = `/${locale}/` + pathSegments.slice(0, index + 1).join("/");
-    const isLast = index === pathSegments.length - 1;
-
-    // Получаем ключ перевода
-    const translationKey = formatSegment(segment);
-    // Безопасно получаем перевод
-    const label = (t as any)[translationKey] || translationKey;
-
-    return (
-      <BreadcrumbItem key={href}>
-        {isLast ? (
-          <BreadcrumbPage>{label}</BreadcrumbPage>
-        ) : (
-          <BreadcrumbLink asChild>
-            <Link href={href}>{label}</Link>
-          </BreadcrumbLink>
-        )}
-      </BreadcrumbItem>
-    );
-  });
 
   return (
     <nav aria-label="Breadcrumb">

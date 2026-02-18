@@ -1,4 +1,5 @@
-import { ReactNode } from "react";
+import type { ReactNode } from "react";
+
 import { LogoutButton } from "@/components/sections/admin-panel/logout-button";
 
 export default function AdminLayout({ children }: { children: ReactNode }) {

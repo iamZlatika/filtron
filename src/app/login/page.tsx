@@ -1,15 +1,15 @@
 "use client";
 
-import { useState } from "react";
-import { useRouter } from "next/navigation";
-import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { useRouter } from "next/navigation";
 import { signIn } from "next-auth/react";
+import { useState } from "react";
+import { useForm } from "react-hook-form";
 
+import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Button } from "@/components/ui/button";
-import { loginSchema, type LoginFormValues } from "@/schemas/login.schema";
+import { type LoginFormValues, loginSchema } from "@/schemas/login.schema";
 
 export default function LoginPage() {
   const router = useRouter();
@@ -27,7 +27,7 @@ export default function LoginPage() {
   const onSubmit = async (data: LoginFormValues) => {
     setServerError(null);
 
-       const res = await signIn("credentials", {
+    const res = await signIn("credentials", {
       redirect: false,
       login: data.login,
       password: data.password,

@@ -1,5 +1,5 @@
-import uk from "../i18n/dictionary/uk.json";
 import ru from "../i18n/dictionary/ru.json";
+import uk from "../i18n/dictionary/uk.json";
 
 export type Locale = "uk" | "ru";
 export type Dictionary = typeof uk;

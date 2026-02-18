@@ -1,9 +1,10 @@
-import Header from "@/components/layout/header";
-import Footer from "@/components/layout/footer";
-import { Metadata } from "next";
-import { ReactNode } from "react";
+import type { Metadata } from "next";
 import Script from "next/script";
+import type { ReactNode } from "react";
+
 import Breadcrumbs from "@/components/layout/breadcrumb";
+import Footer from "@/components/layout/footer";
+import Header from "@/components/layout/header";
 import { getDictionary } from "@/lib/i18n/getDictionary";
 
 export async function generateStaticParams() {

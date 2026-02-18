@@ -1,13 +1,12 @@
 "use client";
 
-import Image from "next/image";
-import Link from "next/link";
 import { X } from "lucide-react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+
 import { useTranslations } from "@/hooks/useTranslations";
 import { APP_NAME } from "@/lib/constants";
-import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
-import { LanguageSwitcher } from "@/components/layout/header/language-switcher";
 
 const links = [
   { key: "navAutoparts", href: "/autoparts" },

@@ -1,4 +1,5 @@
 import Image from "next/image";
+
 import { getDictionary } from "@/lib/i18n/getDictionary";
 
 export default async function B2bPage({

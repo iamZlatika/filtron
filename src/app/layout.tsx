@@ -1,8 +1,11 @@
-import type { Metadata } from "next";
 import "../styles/globals.css";
-import { roboto } from "./fonts";
+
+import type { Metadata } from "next";
 import React from "react";
+
 import { AuthProvider } from "@/providers/AuthProvider";
+
+import { roboto } from "./fonts";
 
 export const metadata: Metadata = {
   title: "Filtron",

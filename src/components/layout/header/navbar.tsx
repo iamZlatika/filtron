@@ -2,9 +2,10 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { cn, getLocalizedHref } from "@/lib/utils";
+
 import { useTranslations } from "@/hooks/useTranslations";
 import type { Dictionary } from "@/lib/i18n/getDictionary";
+import { cn, getLocalizedHref } from "@/lib/utils";
 
 const links = [
   { key: "navAutoparts", href: "/autoparts" },

@@ -1,7 +1,8 @@
+import type { Metadata } from "next";
+import Image from "next/image";
+
 import InteractiveStoreMap from "@/components/sections/contacts/google-map";
 import { getDictionary } from "@/lib/i18n/getDictionary";
-import Image from "next/image";
-import { Metadata } from "next";
 
 export async function generateMetadata({
   params,

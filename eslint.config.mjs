@@ -1,50 +1,69 @@
-import next from "@next/eslint-plugin-next";
-import tseslint from "@typescript-eslint/eslint-plugin";
-import parser from "@typescript-eslint/parser";
-import prettier from "eslint-plugin-prettier";
+import js from "@eslint/js";
+import nextPlugin from "@next/eslint-plugin-next";
+import tseslint from "typescript-eslint";
+import prettierPlugin from "eslint-plugin-prettier";
 import simpleImportSort from "eslint-plugin-simple-import-sort";
 import unusedImports from "eslint-plugin-unused-imports";
 
 /** @type {import('eslint').Linter.FlatConfig[]} */
 export default [
-    {
-        files: ["**/*.{ts,tsx}"],
-        ignores: [".next/**", "node_modules/**"],
-        languageOptions: {
-            parser,
-            parserOptions: {
-                project: "./tsconfig.json",
-            },
-        },
-        plugins: {
-            "@typescript-eslint": tseslint,
-            prettier,
-            "simple-import-sort": simpleImportSort,
-            "unused-imports": unusedImports,
-            next,
-        },
-        rules: {
-            "@typescript-eslint/no-explicit-any": "error",
-            "@typescript-eslint/consistent-type-imports": "error",
+  // 🔥 Глобальный игнор (должен быть первым)
+  {
+    ignores: [
+      "node_modules/**",
+      ".next/**",
+      "dist/**",
+      "build/**",
+      "*.log",
+      "*.json",
+      "*.md",
+    ],
+  },
 
-            // Не ругаться на _unused переменные
-            "@typescript-eslint/no-unused-vars": [
-                "error",
-                {varsIgnorePattern: "^_", argsIgnorePattern: "^_"},
-            ],
+  // Базовый JS
+  js.configs.recommended,
 
-            "unused-imports/no-unused-imports": "error",
+  // TypeScript recommended
+  ...tseslint.configs.recommended,
 
-            "simple-import-sort/imports": "error",
-            "simple-import-sort/exports": "error",
+  {
+    files: ["**/*.{ts,tsx}"],
 
-            "prettier/prettier": "error",
-        },
-        extends: [
-            "eslint:recommended",
-            "plugin:@typescript-eslint/recommended",
-            "plugin:prettier/recommended"
-        ]
+    languageOptions: {
+      parser: tseslint.parser,
+      parserOptions: {
+        project: "./tsconfig.json",
+        tsconfigRootDir: import.meta.dirname,
+      },
     },
-]
-;
+
+    plugins: {
+      "@next/next": nextPlugin,
+      prettier: prettierPlugin,
+      "simple-import-sort": simpleImportSort,
+      "unused-imports": unusedImports,
+    },
+
+    rules: {
+      // ===== TypeScript =====
+      "@typescript-eslint/no-explicit-any": "error",
+      "@typescript-eslint/consistent-type-imports": "error",
+
+      "@typescript-eslint/no-unused-vars": [
+        "error",
+        {
+          varsIgnorePattern: "^_",
+          argsIgnorePattern: "^_",
+        },
+      ],
+
+      // ===== Imports =====
+      "unused-imports/no-unused-imports": "error",
+      "simple-import-sort/imports": "error",
+      "simple-import-sort/exports": "error",
+
+      // ===== Prettier =====
+      "prettier/prettier": "error",
+    },
+  },
+];

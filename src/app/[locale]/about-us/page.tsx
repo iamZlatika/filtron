@@ -1,7 +1,7 @@
+import type { Metadata } from "next";
 import Image from "next/image";
-import { getDictionary } from "@/lib/i18n/getDictionary";
-import { Metadata } from "next";
 
+import { getDictionary } from "@/lib/i18n/getDictionary";
 
 export async function generateMetadata({
   params,
@@ -16,7 +16,6 @@ export async function generateMetadata({
     description: t.meta_description_about_us,
   };
 }
-
 
 export default async function AboutUsPage({
   params,

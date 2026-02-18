@@ -1,6 +1,7 @@
 import Image from "next/image";
+
 import ActionBtn from "@/components/layout/action-btn";
-import { Dictionary } from "@/lib/i18n/getDictionary";
+import type { Dictionary } from "@/lib/i18n/getDictionary";
 
 interface BannerProps {
   t: Dictionary;

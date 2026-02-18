@@ -1,5 +1,5 @@
 import Banner from "@/components/sections/dashboard/banner";
-import { Dictionary } from "@/lib/i18n/getDictionary";
+import type { Dictionary } from "@/lib/i18n/getDictionary";
 
 interface DashboardProps {
   locale: string;

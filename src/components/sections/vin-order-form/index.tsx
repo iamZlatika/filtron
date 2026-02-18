@@ -1,33 +1,30 @@
 "use client";
 
-import { useRouter } from "next/navigation";
-import { useForm, Controller } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import {
-  createOrderRequestSchema,
-  OrderRequestFormValues,
-} from "@/schemas/order-request.schema";
-import { PhoneInput } from "@/components/sections/vin-order-form/input/phone-input";
-import GroupedSelect from "@/components/sections/vin-order-form/select";
+import { useRouter } from "next/navigation";
+import { useMemo, useState } from "react";
+import { Controller, useForm } from "react-hook-form";
 
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Button } from "@/components/ui/button";
-import { Label } from "@/components/ui/label";
-import { Dictionary } from "@/lib/i18n/getDictionary";
 import {
   CAR_BRANDS,
   getYearsByDecade,
   stripHtml,
 } from "@/components/sections/vin-order-form/helpers";
-import { useMemo, useState } from "react";
+import { PhoneInput } from "@/components/sections/vin-order-form/input/phone-input";
+import GroupedSelect from "@/components/sections/vin-order-form/select";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Textarea } from "@/components/ui/textarea";
+import type { Dictionary } from "@/lib/i18n/getDictionary";
+import type { OrderRequestFormValues } from "@/schemas/order-request.schema";
+import { createOrderRequestSchema } from "@/schemas/order-request.schema";
 
 interface VinOrderFormProps {
-  locale: "uk" | "ru";
   dictionary: Dictionary;
 }
 
-const VinOrderForm = ({ locale, dictionary }: VinOrderFormProps) => {
+const VinOrderForm = ({ dictionary }: VinOrderFormProps) => {
   const router = useRouter();
 
   const [formStartTime] = useState(Date.now());
