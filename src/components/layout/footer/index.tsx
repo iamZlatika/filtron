@@ -15,7 +15,7 @@ const Footer = ({ locale, t }: FooterProps) => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="w-full bg-black text-white">
+    <footer className="w-full bg-black text-white z-20">
       <div className="wrapper py-8 md:py-12">
         {/* Main Footer Content */}
         <div className="flex flex-col md:flex-row justify-around gap-8 mb-8">

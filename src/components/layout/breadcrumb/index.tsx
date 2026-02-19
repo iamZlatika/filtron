@@ -21,7 +21,7 @@ const titles: Record<string, string> = {
   "about-us": "navAboutUs",
   order: "orderTitle",
   autoparts: "navAutoparts",
-  "thank-you": "thank_you_text", // или добавить новый ключ в JSON
+  "thank-you": "thank_you_text",
   b2b: "b2b",
   delivery: "delivery",
 };
@@ -43,12 +43,14 @@ export default function Breadcrumbs() {
 
   const segments = pathname.split("/").filter(Boolean);
 
-  // Пропускаем первый сегмент (локаль)
+  if (segments.length <= 1) {
+    return null;
+  }
   const pathSegments = segments.slice(1);
 
   return (
     <nav aria-label="Breadcrumb">
-      <Breadcrumb className="mb-4">
+      <Breadcrumb className="mb-4 mt-2">
         <BreadcrumbList>
           <BreadcrumbItem>
             <BreadcrumbLink asChild>

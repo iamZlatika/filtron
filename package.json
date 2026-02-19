@@ -12,6 +12,7 @@
   "prisma": {
     "seed": "ts-node prisma/seed.ts"
   },
+  "type": "module",
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
     "@prisma/adapter-pg": "^7.2.0",
@@ -40,7 +41,6 @@
     "zod": "^4.2.1"
   },
   "devDependencies": {
-    "@eslint/js": "^10.0.1",
     "@next/eslint-plugin-next": "^16.1.6",
     "@tailwindcss/postcss": "^4",
     "@types/bcryptjs": "^2.4.6",
@@ -50,6 +50,7 @@
     "@types/react-dom": "^19",
     "@types/react-input-mask": "^3.0.6",
     "autoprefixer": "^10.4.22",
+    "baseline-browser-mapping": "^2.10.0",
     "eslint": "^9.39.2",
     "eslint-config-next": "16.0.3",
     "eslint-config-prettier": "^10.1.8",

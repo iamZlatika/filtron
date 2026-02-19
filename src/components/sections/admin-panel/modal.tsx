@@ -1,6 +1,5 @@
 "use client";
 
-import type { News } from "@prisma/client";
 import type { ReactNode } from "react";
 import { useState } from "react";
 
@@ -13,7 +12,11 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import type { ActionResponse, NewsFormValues } from "@/schemas/news.schema";
+import type {
+  ActionResponse,
+  News,
+  NewsFormValues,
+} from "@/schemas/news.schema";
 
 type ActionResult<T> = Promise<ActionResponse<T>>;
 

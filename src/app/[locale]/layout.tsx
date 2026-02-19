@@ -69,11 +69,9 @@ export default async function LocaleLayout({
       </noscript>
 
       <Header locale={locale} t={t} />
-      <main className="grow">
-        <div className="wrapper">
-          <Breadcrumbs />
-          {children}
-        </div>
+      <main className="grow wrapper flex flex-col">
+        <Breadcrumbs />
+        {children}
       </main>
       <Footer locale={locale} t={t} />
     </>

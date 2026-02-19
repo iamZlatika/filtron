@@ -5,84 +5,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="49dcc720-8a1c-4638-8891-65dbcda4c085" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/sections/admin-panel/news-table/delete-dialog.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/next-auth.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.eslintignore" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/sections/dashboard/news-panel.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eslint.config.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/eslint.config.mjs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prisma.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/prisma.config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prisma/generated/browser.ts" beforeDir="false" afterPath="$PROJECT_DIR$/prisma/generated/browser.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prisma/generated/client.ts" beforeDir="false" afterPath="$PROJECT_DIR$/prisma/generated/client.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prisma/generated/commonInputTypes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/prisma/generated/commonInputTypes.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prisma/generated/enums.ts" beforeDir="false" afterPath="$PROJECT_DIR$/prisma/generated/enums.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prisma/generated/internal/class.ts" beforeDir="false" afterPath="$PROJECT_DIR$/prisma/generated/internal/class.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prisma/generated/internal/prismaNamespace.ts" beforeDir="false" afterPath="$PROJECT_DIR$/prisma/generated/internal/prismaNamespace.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prisma/generated/internal/prismaNamespaceBrowser.ts" beforeDir="false" afterPath="$PROJECT_DIR$/prisma/generated/internal/prismaNamespaceBrowser.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prisma/generated/models.ts" beforeDir="false" afterPath="$PROJECT_DIR$/prisma/generated/models.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prisma/generated/models/LoginAttempt.ts" beforeDir="false" afterPath="$PROJECT_DIR$/prisma/generated/models/LoginAttempt.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prisma/generated/models/News.ts" beforeDir="false" afterPath="$PROJECT_DIR$/prisma/generated/models/News.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prisma/generated/models/User.ts" beforeDir="false" afterPath="$PROJECT_DIR$/prisma/generated/models/User.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prisma/seed.ts" beforeDir="false" afterPath="$PROJECT_DIR$/prisma/seed.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prisma/seed2.ts" beforeDir="false" afterPath="$PROJECT_DIR$/prisma/seed2.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/news.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/news.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(admin)/admin-news/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(admin)/admin-news/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prisma/generated/browser.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/prisma/generated/client.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/prisma/generated/commonInputTypes.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/prisma/generated/enums.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/prisma/generated/internal/class.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/prisma/generated/internal/prismaNamespace.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/prisma/generated/internal/prismaNamespaceBrowser.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/prisma/generated/models.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/prisma/generated/models/LoginAttempt.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/prisma/generated/models/News.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/prisma/generated/models/User.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/prisma/schema.prisma" beforeDir="false" afterPath="$PROJECT_DIR$/prisma/schema.prisma" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/(admin)/admin-news/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(admin)/admin-news/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/[locale]/about-us/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/about-us/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/[locale]/autoparts/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/autoparts/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/[locale]/contacts/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/contacts/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/[locale]/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/[locale]/order/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/order/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/[locale]/robots.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/robots.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/[locale]/services/b2b/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/services/b2b/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/[locale]/services/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/services/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/[locale]/sitemap.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/sitemap.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/[locale]/thank-you/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/thank-you/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/[locale]/wix-filters/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/wix-filters/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/api/auth/[...nextauth]/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/auth/[...nextauth]/route.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/api/send-email/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/send-email/route.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/fonts.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/fonts.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/login/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/login/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/layout/action-btn/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/action-btn/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/[locale]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/[locale]/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/layout/breadcrumb/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/breadcrumb/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/layout/footer/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/footer/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/layout/header/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/header/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/layout/header/language-switcher.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/header/language-switcher.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/layout/header/mobile-nav/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/header/mobile-nav/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/layout/header/navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/header/navbar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/sections/admin-panel/logout-button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sections/admin-panel/logout-button.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/sections/admin-panel/modal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sections/admin-panel/modal.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/sections/admin-panel/news-form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sections/admin-panel/news-form.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/sections/admin-panel/news-table/news-table.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sections/admin-panel/news-table/news-table.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/sections/admin-panel/news-table/table-row.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sections/admin-panel/news-table/table-row.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/sections/dashboard/banner.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sections/dashboard/banner.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/sections/dashboard/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sections/dashboard/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/sections/thank-you/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sections/thank-you/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/sections/vin-order-form/helpers.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sections/vin-order-form/helpers.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/sections/vin-order-form/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sections/vin-order-form/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/sections/vin-order-form/input/phone-input.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sections/vin-order-form/input/phone-input.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/breadcrumb.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/breadcrumb.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/button.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/dialog.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/dialog.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/form.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/label.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/label.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/select.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/select.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/table.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/table.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/textarea.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/textarea.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/global.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/global.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hooks/useTranslations.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useTranslations.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/auth/auth.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/auth/auth.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/auth/rate-limit.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/auth/rate-limit.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/db/prisma.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/db/prisma.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/i18n/getDictionary.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/i18n/getDictionary.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/utils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/utils.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/providers/AuthProvider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/providers/AuthProvider.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/proxy.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/proxy.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/schemas/news.schema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/schemas/news.schema.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/news.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/news.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tailwind.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/globals.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +37,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="131" />
+    <option name="cachedIndexableFilesCount" value="132" />
     <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
   </component>
   <component name="Git.Settings">
@@ -240,7 +187,8 @@
       <workItem from="1769509650419" duration="78000" />
       <workItem from="1770974299248" duration="767000" />
       <workItem from="1771318251209" duration="13703000" />
-      <workItem from="1771419938906" duration="1543000" />
+      <workItem from="1771419938906" duration="9157000" />
+      <workItem from="1771503606906" duration="9347000" />
     </task>
     <servers />
   </component>
@@ -270,6 +218,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/components/sections/dashboard/index.tsx</url>
+          <line>8</line>
           <option name="timeStamp" value="9" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">

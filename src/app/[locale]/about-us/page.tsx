@@ -26,7 +26,7 @@ export default async function AboutUsPage({
   const t = getDictionary(locale);
 
   return (
-    <div className="flex flex-col gap-0 py-0">
+    <div className="flex flex-col gap-0 py-0 mb-10">
       {/* Title */}
       <h1 className="h1-bold">{t.about_us}</h1>
 

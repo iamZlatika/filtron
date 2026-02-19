@@ -2,7 +2,7 @@ import { createNews, getAllNews } from "@/actions/news";
 import AdminModalDialog from "@/components/sections/admin-panel/modal";
 import NewsTable from "@/components/sections/admin-panel/news-table/news-table";
 
-export default async function AdminNewsPage() {
+export async function AdminNewsPage() {
   const newsList = await getAllNews();
 
   if (!newsList.success) {
@@ -24,3 +24,5 @@ export default async function AdminNewsPage() {
     </div>
   );
 }
+
+export default AdminNewsPage;
