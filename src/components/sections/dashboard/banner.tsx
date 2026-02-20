@@ -30,7 +30,7 @@ const Banner = ({ locale, t }: BannerProps) => {
             alt="Banner"
             width={900}
             height={600}
-            className="w-full h-auto object-contain" // Картинка теперь диктует высоту
+            className="w-full h-auto object-contain"
             sizes="(max-width: 1024px) 100vw, 50vw"
             priority
           />

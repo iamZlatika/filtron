@@ -55,7 +55,7 @@ const VinOrderForm = ({ dictionary }: VinOrderFormProps) => {
     },
   });
   const onSubmit = async (data: OrderRequestFormValues) => {
-    // Anti-bot проверки
+    // Anti-bot
     const timeTaken = Date.now() - formStartTime;
 
     // Honeypot check
@@ -91,14 +91,11 @@ const VinOrderForm = ({ dictionary }: VinOrderFormProps) => {
         throw new Error("Failed to send form");
       }
 
-      // 🔐 Флаг успешной отправки
       sessionStorage.setItem("form_submitted", "true");
 
-      // 🚀 Редирект на thank-you
       router.push("/thank-you");
     } catch (e) {
       console.error(e);
-      // тут при желании можно показать toast / error state
     }
   };
 

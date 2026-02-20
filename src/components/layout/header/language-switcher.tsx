@@ -10,42 +10,31 @@ export function LanguageSwitcher() {
   const pathname = usePathname();
   const { locale } = useTranslations();
 
-  // Функция для получения пути на другом языке
   const getLocalizedPath = (newLocale: Locale) => {
     const segments = pathname.split("/");
 
-    // segments[0] всегда "" (пустая строка перед первым слешем)
-    // Проверяем, является ли второй сегмент текущей локалью (ru или uk)
     const isRu = segments[1] === "ru";
     const isUk = segments[1] === "uk";
 
-    // Создаем копию сегментов для модификации
     const newSegments = [...segments];
 
     if (newLocale === "ru") {
       if (isRu) return pathname; // Уже на RU
       if (isUk) {
-        // Заменяем uk на ru
         newSegments[1] = "ru";
       } else {
-        // Если префикса не было (базовый путь /services), добавляем ru
         newSegments.splice(1, 0, "ru");
       }
     } else {
-      // Переход на UK (дефолтная локаль без префикса или с префиксом /uk)
       if (isRu) {
-        // Удаляем /ru
         newSegments.splice(1, 1);
       } else if (isUk) {
-        // Если мы хотим "чистые" URL для UK, можно удалить префикс /uk
-        // newSegments.splice(1, 1);
-        return pathname; // Или оставить как есть, если /uk допустим
+        return pathname;
       }
     }
 
-    // Собираем путь обратно, фильтруя лишние пустые строки
     const finalPath = newSegments.join("/") || "/";
-    return finalPath.replace(/\/+$/, "") || "/"; // Убираем лишний слеш в конце
+    return finalPath.replace(/\/+$/, "") || "/";
   };
 
   return (

@@ -5,7 +5,7 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: "*",
       allow: "/",
-      disallow: ["/admin", "/api/"], // Закрываем служебные пути
+      disallow: ["/admin", "/api/"],
     },
     sitemap: "https://filtron.zp.ua/sitemap.xml",
   };

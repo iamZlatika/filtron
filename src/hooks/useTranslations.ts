@@ -7,7 +7,6 @@ import { getDictionary, isLocale } from "@/lib/i18n/getDictionary";
 export function useTranslations() {
   const params = useParams();
 
-  // Приводим locale к строке или undefined
   const localeParam =
     typeof params.locale === "string" ? params.locale : undefined;
 
@@ -17,6 +16,6 @@ export function useTranslations() {
   return {
     locale,
     dict,
-    t: dict, // alias для удобства
+    t: dict,
   };
 }

@@ -7,7 +7,6 @@ import unusedImports from "eslint-plugin-unused-imports";
 
 /** @type {import('eslint').Linter.FlatConfig[]} */
 export default [
-  // 🔥 Глобальный игнор (должен быть первым)
   {
     ignores: [
       "node_modules/**",
@@ -21,10 +20,8 @@ export default [
     ],
   },
 
-  // Базовый JS
   js.configs.recommended,
 
-  // TypeScript recommended
   ...tseslint.configs.recommended,
 
   {
