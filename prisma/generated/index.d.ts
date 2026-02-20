@@ -1056,64 +1056,64 @@ export namespace Prisma {
 
   export type NewsMinAggregateOutputType = {
     id: string | null
-    title_uk: string | null
-    text_uk: string | null
-    title_ru: string | null
-    text_ru: string | null
     createdAt: Date | null
     updatedAt: Date | null
+    text_ru: string | null
+    text_uk: string | null
+    title_ru: string | null
+    title_uk: string | null
   }
 
   export type NewsMaxAggregateOutputType = {
     id: string | null
-    title_uk: string | null
-    text_uk: string | null
-    title_ru: string | null
-    text_ru: string | null
     createdAt: Date | null
     updatedAt: Date | null
+    text_ru: string | null
+    text_uk: string | null
+    title_ru: string | null
+    title_uk: string | null
   }
 
   export type NewsCountAggregateOutputType = {
     id: number
-    title_uk: number
-    text_uk: number
-    title_ru: number
-    text_ru: number
     createdAt: number
     updatedAt: number
+    text_ru: number
+    text_uk: number
+    title_ru: number
+    title_uk: number
     _all: number
   }
 
 
   export type NewsMinAggregateInputType = {
     id?: true
-    title_uk?: true
-    text_uk?: true
-    title_ru?: true
-    text_ru?: true
     createdAt?: true
     updatedAt?: true
+    text_ru?: true
+    text_uk?: true
+    title_ru?: true
+    title_uk?: true
   }
 
   export type NewsMaxAggregateInputType = {
     id?: true
-    title_uk?: true
-    text_uk?: true
-    title_ru?: true
-    text_ru?: true
     createdAt?: true
     updatedAt?: true
+    text_ru?: true
+    text_uk?: true
+    title_ru?: true
+    title_uk?: true
   }
 
   export type NewsCountAggregateInputType = {
     id?: true
-    title_uk?: true
-    text_uk?: true
-    title_ru?: true
-    text_ru?: true
     createdAt?: true
     updatedAt?: true
+    text_ru?: true
+    text_uk?: true
+    title_ru?: true
+    title_uk?: true
     _all?: true
   }
 
@@ -1191,12 +1191,12 @@ export namespace Prisma {
 
   export type NewsGroupByOutputType = {
     id: string
-    title_uk: string
-    text_uk: string
-    title_ru: string
-    text_ru: string
     createdAt: Date
     updatedAt: Date
+    text_ru: string
+    text_uk: string
+    title_ru: string
+    title_uk: string
     _count: NewsCountAggregateOutputType | null
     _min: NewsMinAggregateOutputType | null
     _max: NewsMaxAggregateOutputType | null
@@ -1218,57 +1218,57 @@ export namespace Prisma {
 
   export type NewsSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
-    title_uk?: boolean
-    text_uk?: boolean
-    title_ru?: boolean
-    text_ru?: boolean
     createdAt?: boolean
     updatedAt?: boolean
+    text_ru?: boolean
+    text_uk?: boolean
+    title_ru?: boolean
+    title_uk?: boolean
   }, ExtArgs["result"]["news"]>
 
   export type NewsSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
-    title_uk?: boolean
-    text_uk?: boolean
-    title_ru?: boolean
-    text_ru?: boolean
     createdAt?: boolean
     updatedAt?: boolean
+    text_ru?: boolean
+    text_uk?: boolean
+    title_ru?: boolean
+    title_uk?: boolean
   }, ExtArgs["result"]["news"]>
 
   export type NewsSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
-    title_uk?: boolean
-    text_uk?: boolean
-    title_ru?: boolean
-    text_ru?: boolean
     createdAt?: boolean
     updatedAt?: boolean
+    text_ru?: boolean
+    text_uk?: boolean
+    title_ru?: boolean
+    title_uk?: boolean
   }, ExtArgs["result"]["news"]>
 
   export type NewsSelectScalar = {
     id?: boolean
-    title_uk?: boolean
-    text_uk?: boolean
-    title_ru?: boolean
-    text_ru?: boolean
     createdAt?: boolean
     updatedAt?: boolean
+    text_ru?: boolean
+    text_uk?: boolean
+    title_ru?: boolean
+    title_uk?: boolean
   }
 
-  export type NewsOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "title_uk" | "text_uk" | "title_ru" | "text_ru" | "createdAt" | "updatedAt", ExtArgs["result"]["news"]>
+  export type NewsOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "createdAt" | "updatedAt" | "text_ru" | "text_uk" | "title_ru" | "title_uk", ExtArgs["result"]["news"]>
 
   export type $NewsPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     name: "News"
     objects: {}
     scalars: $Extensions.GetPayloadResult<{
       id: string
-      title_uk: string
-      text_uk: string
-      title_ru: string
-      text_ru: string
       createdAt: Date
       updatedAt: Date
+      text_ru: string
+      text_uk: string
+      title_ru: string
+      title_uk: string
     }, ExtArgs["result"]["news"]>
     composites: {}
   }
@@ -1693,12 +1693,12 @@ export namespace Prisma {
    */
   interface NewsFieldRefs {
     readonly id: FieldRef<"News", 'String'>
-    readonly title_uk: FieldRef<"News", 'String'>
-    readonly text_uk: FieldRef<"News", 'String'>
-    readonly title_ru: FieldRef<"News", 'String'>
-    readonly text_ru: FieldRef<"News", 'String'>
     readonly createdAt: FieldRef<"News", 'DateTime'>
     readonly updatedAt: FieldRef<"News", 'DateTime'>
+    readonly text_ru: FieldRef<"News", 'String'>
+    readonly text_uk: FieldRef<"News", 'String'>
+    readonly title_ru: FieldRef<"News", 'String'>
+    readonly title_uk: FieldRef<"News", 'String'>
   }
     
 
@@ -2077,40 +2077,40 @@ export namespace Prisma {
 
   export type UserMinAggregateOutputType = {
     id: string | null
-    login: string | null
     password: string | null
+    login: string | null
   }
 
   export type UserMaxAggregateOutputType = {
     id: string | null
-    login: string | null
     password: string | null
+    login: string | null
   }
 
   export type UserCountAggregateOutputType = {
     id: number
-    login: number
     password: number
+    login: number
     _all: number
   }
 
 
   export type UserMinAggregateInputType = {
     id?: true
-    login?: true
     password?: true
+    login?: true
   }
 
   export type UserMaxAggregateInputType = {
     id?: true
-    login?: true
     password?: true
+    login?: true
   }
 
   export type UserCountAggregateInputType = {
     id?: true
-    login?: true
     password?: true
+    login?: true
     _all?: true
   }
 
@@ -2188,8 +2188,8 @@ export namespace Prisma {
 
   export type UserGroupByOutputType = {
     id: string
-    login: string
     password: string
+    login: string
     _count: UserCountAggregateOutputType | null
     _min: UserMinAggregateOutputType | null
     _max: UserMaxAggregateOutputType | null
@@ -2211,37 +2211,37 @@ export namespace Prisma {
 
   export type UserSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
-    login?: boolean
     password?: boolean
+    login?: boolean
   }, ExtArgs["result"]["user"]>
 
   export type UserSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
-    login?: boolean
     password?: boolean
+    login?: boolean
   }, ExtArgs["result"]["user"]>
 
   export type UserSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
-    login?: boolean
     password?: boolean
+    login?: boolean
   }, ExtArgs["result"]["user"]>
 
   export type UserSelectScalar = {
     id?: boolean
-    login?: boolean
     password?: boolean
+    login?: boolean
   }
 
-  export type UserOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "login" | "password", ExtArgs["result"]["user"]>
+  export type UserOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "password" | "login", ExtArgs["result"]["user"]>
 
   export type $UserPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     name: "User"
     objects: {}
     scalars: $Extensions.GetPayloadResult<{
       id: string
-      login: string
       password: string
+      login: string
     }, ExtArgs["result"]["user"]>
     composites: {}
   }
@@ -2666,8 +2666,8 @@ export namespace Prisma {
    */
   interface UserFieldRefs {
     readonly id: FieldRef<"User", 'String'>
-    readonly login: FieldRef<"User", 'String'>
     readonly password: FieldRef<"User", 'String'>
+    readonly login: FieldRef<"User", 'String'>
   }
     
 
@@ -4066,12 +4066,12 @@ export namespace Prisma {
 
   export const NewsScalarFieldEnum: {
     id: 'id',
-    title_uk: 'title_uk',
+    createdAt: 'createdAt',
+    updatedAt: 'updatedAt',
+    text_ru: 'text_ru',
     text_uk: 'text_uk',
     title_ru: 'title_ru',
-    text_ru: 'text_ru',
-    createdAt: 'createdAt',
-    updatedAt: 'updatedAt'
+    title_uk: 'title_uk'
   };
 
   export type NewsScalarFieldEnum = (typeof NewsScalarFieldEnum)[keyof typeof NewsScalarFieldEnum]
@@ -4079,8 +4079,8 @@ export namespace Prisma {
 
   export const UserScalarFieldEnum: {
     id: 'id',
-    login: 'login',
-    password: 'password'
+    password: 'password',
+    login: 'login'
   };
 
   export type UserScalarFieldEnum = (typeof UserScalarFieldEnum)[keyof typeof UserScalarFieldEnum]
@@ -4181,22 +4181,22 @@ export namespace Prisma {
     OR?: NewsWhereInput[]
     NOT?: NewsWhereInput | NewsWhereInput[]
     id?: StringFilter<"News"> | string
-    title_uk?: StringFilter<"News"> | string
-    text_uk?: StringFilter<"News"> | string
-    title_ru?: StringFilter<"News"> | string
-    text_ru?: StringFilter<"News"> | string
     createdAt?: DateTimeFilter<"News"> | Date | string
     updatedAt?: DateTimeFilter<"News"> | Date | string
+    text_ru?: StringFilter<"News"> | string
+    text_uk?: StringFilter<"News"> | string
+    title_ru?: StringFilter<"News"> | string
+    title_uk?: StringFilter<"News"> | string
   }
 
   export type NewsOrderByWithRelationInput = {
     id?: SortOrder
-    title_uk?: SortOrder
-    text_uk?: SortOrder
-    title_ru?: SortOrder
-    text_ru?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
+    text_ru?: SortOrder
+    text_uk?: SortOrder
+    title_ru?: SortOrder
+    title_uk?: SortOrder
   }
 
   export type NewsWhereUniqueInput = Prisma.AtLeast<{
@@ -4204,22 +4204,22 @@ export namespace Prisma {
     AND?: NewsWhereInput | NewsWhereInput[]
     OR?: NewsWhereInput[]
     NOT?: NewsWhereInput | NewsWhereInput[]
-    title_uk?: StringFilter<"News"> | string
-    text_uk?: StringFilter<"News"> | string
-    title_ru?: StringFilter<"News"> | string
-    text_ru?: StringFilter<"News"> | string
     createdAt?: DateTimeFilter<"News"> | Date | string
     updatedAt?: DateTimeFilter<"News"> | Date | string
+    text_ru?: StringFilter<"News"> | string
+    text_uk?: StringFilter<"News"> | string
+    title_ru?: StringFilter<"News"> | string
+    title_uk?: StringFilter<"News"> | string
   }, "id">
 
   export type NewsOrderByWithAggregationInput = {
     id?: SortOrder
-    title_uk?: SortOrder
-    text_uk?: SortOrder
-    title_ru?: SortOrder
-    text_ru?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
+    text_ru?: SortOrder
+    text_uk?: SortOrder
+    title_ru?: SortOrder
+    title_uk?: SortOrder
     _count?: NewsCountOrderByAggregateInput
     _max?: NewsMaxOrderByAggregateInput
     _min?: NewsMinOrderByAggregateInput
@@ -4230,12 +4230,12 @@ export namespace Prisma {
     OR?: NewsScalarWhereWithAggregatesInput[]
     NOT?: NewsScalarWhereWithAggregatesInput | NewsScalarWhereWithAggregatesInput[]
     id?: StringWithAggregatesFilter<"News"> | string
-    title_uk?: StringWithAggregatesFilter<"News"> | string
-    text_uk?: StringWithAggregatesFilter<"News"> | string
-    title_ru?: StringWithAggregatesFilter<"News"> | string
-    text_ru?: StringWithAggregatesFilter<"News"> | string
     createdAt?: DateTimeWithAggregatesFilter<"News"> | Date | string
     updatedAt?: DateTimeWithAggregatesFilter<"News"> | Date | string
+    text_ru?: StringWithAggregatesFilter<"News"> | string
+    text_uk?: StringWithAggregatesFilter<"News"> | string
+    title_ru?: StringWithAggregatesFilter<"News"> | string
+    title_uk?: StringWithAggregatesFilter<"News"> | string
   }
 
   export type UserWhereInput = {
@@ -4243,14 +4243,14 @@ export namespace Prisma {
     OR?: UserWhereInput[]
     NOT?: UserWhereInput | UserWhereInput[]
     id?: StringFilter<"User"> | string
-    login?: StringFilter<"User"> | string
     password?: StringFilter<"User"> | string
+    login?: StringFilter<"User"> | string
   }
 
   export type UserOrderByWithRelationInput = {
     id?: SortOrder
-    login?: SortOrder
     password?: SortOrder
+    login?: SortOrder
   }
 
   export type UserWhereUniqueInput = Prisma.AtLeast<{
@@ -4264,8 +4264,8 @@ export namespace Prisma {
 
   export type UserOrderByWithAggregationInput = {
     id?: SortOrder
-    login?: SortOrder
     password?: SortOrder
+    login?: SortOrder
     _count?: UserCountOrderByAggregateInput
     _max?: UserMaxOrderByAggregateInput
     _min?: UserMinOrderByAggregateInput
@@ -4276,8 +4276,8 @@ export namespace Prisma {
     OR?: UserScalarWhereWithAggregatesInput[]
     NOT?: UserScalarWhereWithAggregatesInput | UserScalarWhereWithAggregatesInput[]
     id?: StringWithAggregatesFilter<"User"> | string
-    login?: StringWithAggregatesFilter<"User"> | string
     password?: StringWithAggregatesFilter<"User"> | string
+    login?: StringWithAggregatesFilter<"User"> | string
   }
 
   export type LoginAttemptWhereInput = {
@@ -4331,114 +4331,114 @@ export namespace Prisma {
 
   export type NewsCreateInput = {
     id?: string
-    title_uk: string
-    text_uk: string
-    title_ru: string
-    text_ru: string
     createdAt?: Date | string
     updatedAt?: Date | string
+    text_ru: string
+    text_uk: string
+    title_ru: string
+    title_uk: string
   }
 
   export type NewsUncheckedCreateInput = {
     id?: string
-    title_uk: string
-    text_uk: string
-    title_ru: string
-    text_ru: string
     createdAt?: Date | string
     updatedAt?: Date | string
+    text_ru: string
+    text_uk: string
+    title_ru: string
+    title_uk: string
   }
 
   export type NewsUpdateInput = {
     id?: StringFieldUpdateOperationsInput | string
-    title_uk?: StringFieldUpdateOperationsInput | string
-    text_uk?: StringFieldUpdateOperationsInput | string
-    title_ru?: StringFieldUpdateOperationsInput | string
-    text_ru?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    text_ru?: StringFieldUpdateOperationsInput | string
+    text_uk?: StringFieldUpdateOperationsInput | string
+    title_ru?: StringFieldUpdateOperationsInput | string
+    title_uk?: StringFieldUpdateOperationsInput | string
   }
 
   export type NewsUncheckedUpdateInput = {
     id?: StringFieldUpdateOperationsInput | string
-    title_uk?: StringFieldUpdateOperationsInput | string
-    text_uk?: StringFieldUpdateOperationsInput | string
-    title_ru?: StringFieldUpdateOperationsInput | string
-    text_ru?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    text_ru?: StringFieldUpdateOperationsInput | string
+    text_uk?: StringFieldUpdateOperationsInput | string
+    title_ru?: StringFieldUpdateOperationsInput | string
+    title_uk?: StringFieldUpdateOperationsInput | string
   }
 
   export type NewsCreateManyInput = {
     id?: string
-    title_uk: string
-    text_uk: string
-    title_ru: string
-    text_ru: string
     createdAt?: Date | string
     updatedAt?: Date | string
+    text_ru: string
+    text_uk: string
+    title_ru: string
+    title_uk: string
   }
 
   export type NewsUpdateManyMutationInput = {
     id?: StringFieldUpdateOperationsInput | string
-    title_uk?: StringFieldUpdateOperationsInput | string
-    text_uk?: StringFieldUpdateOperationsInput | string
-    title_ru?: StringFieldUpdateOperationsInput | string
-    text_ru?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    text_ru?: StringFieldUpdateOperationsInput | string
+    text_uk?: StringFieldUpdateOperationsInput | string
+    title_ru?: StringFieldUpdateOperationsInput | string
+    title_uk?: StringFieldUpdateOperationsInput | string
   }
 
   export type NewsUncheckedUpdateManyInput = {
     id?: StringFieldUpdateOperationsInput | string
-    title_uk?: StringFieldUpdateOperationsInput | string
-    text_uk?: StringFieldUpdateOperationsInput | string
-    title_ru?: StringFieldUpdateOperationsInput | string
-    text_ru?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    text_ru?: StringFieldUpdateOperationsInput | string
+    text_uk?: StringFieldUpdateOperationsInput | string
+    title_ru?: StringFieldUpdateOperationsInput | string
+    title_uk?: StringFieldUpdateOperationsInput | string
   }
 
   export type UserCreateInput = {
     id?: string
-    login: string
     password: string
+    login: string
   }
 
   export type UserUncheckedCreateInput = {
     id?: string
-    login: string
     password: string
+    login: string
   }
 
   export type UserUpdateInput = {
     id?: StringFieldUpdateOperationsInput | string
-    login?: StringFieldUpdateOperationsInput | string
     password?: StringFieldUpdateOperationsInput | string
+    login?: StringFieldUpdateOperationsInput | string
   }
 
   export type UserUncheckedUpdateInput = {
     id?: StringFieldUpdateOperationsInput | string
-    login?: StringFieldUpdateOperationsInput | string
     password?: StringFieldUpdateOperationsInput | string
+    login?: StringFieldUpdateOperationsInput | string
   }
 
   export type UserCreateManyInput = {
     id?: string
-    login: string
     password: string
+    login: string
   }
 
   export type UserUpdateManyMutationInput = {
     id?: StringFieldUpdateOperationsInput | string
-    login?: StringFieldUpdateOperationsInput | string
     password?: StringFieldUpdateOperationsInput | string
+    login?: StringFieldUpdateOperationsInput | string
   }
 
   export type UserUncheckedUpdateManyInput = {
     id?: StringFieldUpdateOperationsInput | string
-    login?: StringFieldUpdateOperationsInput | string
     password?: StringFieldUpdateOperationsInput | string
+    login?: StringFieldUpdateOperationsInput | string
   }
 
   export type LoginAttemptCreateInput = {
@@ -4518,32 +4518,32 @@ export namespace Prisma {
 
   export type NewsCountOrderByAggregateInput = {
     id?: SortOrder
-    title_uk?: SortOrder
-    text_uk?: SortOrder
-    title_ru?: SortOrder
-    text_ru?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
+    text_ru?: SortOrder
+    text_uk?: SortOrder
+    title_ru?: SortOrder
+    title_uk?: SortOrder
   }
 
   export type NewsMaxOrderByAggregateInput = {
     id?: SortOrder
-    title_uk?: SortOrder
-    text_uk?: SortOrder
-    title_ru?: SortOrder
-    text_ru?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
+    text_ru?: SortOrder
+    text_uk?: SortOrder
+    title_ru?: SortOrder
+    title_uk?: SortOrder
   }
 
   export type NewsMinOrderByAggregateInput = {
     id?: SortOrder
-    title_uk?: SortOrder
-    text_uk?: SortOrder
-    title_ru?: SortOrder
-    text_ru?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
+    text_ru?: SortOrder
+    text_uk?: SortOrder
+    title_ru?: SortOrder
+    title_uk?: SortOrder
   }
 
   export type StringWithAggregatesFilter<$PrismaModel = never> = {
@@ -4580,20 +4580,20 @@ export namespace Prisma {
 
   export type UserCountOrderByAggregateInput = {
     id?: SortOrder
-    login?: SortOrder
     password?: SortOrder
+    login?: SortOrder
   }
 
   export type UserMaxOrderByAggregateInput = {
     id?: SortOrder
-    login?: SortOrder
     password?: SortOrder
+    login?: SortOrder
   }
 
   export type UserMinOrderByAggregateInput = {
     id?: SortOrder
-    login?: SortOrder
     password?: SortOrder
+    login?: SortOrder
   }
 
   export type IntFilter<$PrismaModel = never> = {

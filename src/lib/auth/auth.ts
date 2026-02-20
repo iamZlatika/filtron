@@ -7,16 +7,14 @@ import { prisma } from "@/lib/db/prisma";
 import { checkRateLimit, resetRateLimit } from "./rate-limit";
 
 export const authOptions: NextAuthOptions = {
+  debug: false,
   secret: process.env.NEXT_AUTH_SECRET,
-
   session: {
     strategy: "jwt",
   },
-
   pages: {
     signIn: "/login",
   },
-
   providers: [
     CredentialsProvider({
       name: "Credentials",
@@ -28,40 +26,48 @@ export const authOptions: NextAuthOptions = {
         if (!credentials?.login || !credentials?.password) {
           return null;
         }
-        let ip = "127.0.0.1";
 
+        let ip = "127.0.0.1";
         if (req?.headers) {
-          const forwarded = req.headers.get("x-forwarded-for");
-          if (forwarded) {
-            ip = forwarded.split(",")[0].trim();
-          }
+          const forwarded =
+            typeof req.headers.get === "function"
+              ? req.headers.get("x-forwarded-for")
+              : (req.headers as Record<string, string>)["x-forwarded-for"];
+          if (forwarded) ip = forwarded.split(",")[0].trim();
         }
+
         const { success } = await checkRateLimit(ip);
         if (!success) {
           throw new Error("Too many attempts. Please try again later.");
         }
 
         const user = await prisma.user.findUnique({
-          where: {
-            login: credentials.login,
-          },
+          where: { login: credentials.login.trim() },
         });
 
-        if (
-          !user ||
-          !(await bcrypt.compare(credentials.password, user.password))
-        ) {
+        if (!user) {
           return null;
         }
+
+        const isPasswordOk = await bcrypt.compare(
+          credentials.password,
+          user.password,
+        );
+
+        if (!isPasswordOk) {
+          return null;
+        }
+
         await resetRateLimit(ip);
+
         return {
           id: user.id,
           name: user.login,
+          email: user.login,
         };
       },
     }),
   ],
-
   callbacks: {
     async jwt({ token, user }) {
       if (user) {

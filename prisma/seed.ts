@@ -1,4 +1,5 @@
 import { PrismaPg } from "@prisma/adapter-pg";
+import bcrypt from "bcryptjs";
 import { Pool } from "pg";
 
 import { PrismaClient } from "./generated/client";
@@ -9,28 +10,29 @@ const adapter = new PrismaPg(pool);
 const prisma = new PrismaClient({ adapter });
 
 async function main() {
-  console.log("Начинаем заполнение базы данных...");
+  console.log("Создание администратора...");
 
-  const START = 4;
-  const COUNT = 10;
+  const adminName = "filtradmin1";
+  const password = "tempPass123";
+  const hashedPassword = await bcrypt.hash(password, 10);
 
-  for (let i = START; i < START + COUNT; i++) {
-    await prisma.news.create({
-      data: {
-        title_uk: `Тестова новина №${i}`,
-        text_uk: `Це опис тестової новини під номером ${i} українською мовою.`,
-        title_ru: `Тестовая новость №${i}`,
-        text_ru: `Это описание тестовой новости под номером ${i} на русском языке.`,
-      },
-    });
-  }
+  await prisma.user.upsert({
+    where: { login: adminName },
+    update: {
+      password: hashedPassword,
+    },
+    create: {
+      login: adminName,
+      password: hashedPassword,
+    },
+  });
 
-  console.log("Сид успешно завершен!");
+  console.log(`Администратор ${adminName} успешно создан или обновлен.`);
 }
 
 main()
   .catch((e) => {
-    console.error(e);
+    console.error("Ошибка при выполнении сида:", e);
     process.exit(1);
   })
   .finally(async () => {

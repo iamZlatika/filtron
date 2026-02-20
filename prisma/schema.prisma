@@ -9,18 +9,18 @@ datasource db {
 
 model News {
   id        String   @id @default(cuid())
-  title_uk  String
-  text_uk   String   @db.Text
-  title_ru  String
-  text_ru   String   @db.Text
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+  text_ru   String
+  text_uk   String
+  title_ru  String
+  title_uk  String
 }
 
 model User {
   id       String @id @default(cuid())
-  login    String @unique
   password String
+  login    String @unique
 }
 
 model LoginAttempt {
