@@ -1,6 +1,6 @@
 "use server";
 
-import { revalidatePath } from "next/cache";
+import { revalidatePath, unstable_noStore as noStore } from "next/cache";
 
 import { normalizeError } from "@/actions/services";
 import type {
@@ -42,6 +42,7 @@ export async function createNews(
 
 export async function getAllNews(): Promise<ActionResponse<News[]>> {
   try {
+    noStore();
     const newsData = await newsService.getAll();
     return { success: true, data: newsData };
   } catch (error: unknown) {

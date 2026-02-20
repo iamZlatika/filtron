@@ -13,7 +13,7 @@ async function main() {
   console.log("Создание администратора...");
 
   const adminName = "filtradmin";
-  const password = "tempPass123";
+  const password = "F1ltro№@26";
   const hashedPassword = await bcrypt.hash(password, 10);
 
   await prisma.user.upsert({
