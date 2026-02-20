@@ -17,8 +17,8 @@ const NewsPanel = ({ locale, news }: NewsPanelProps) => {
   };
 
   return (
-    <section className="relative z-10 w-full md:w-1/2 mt-6 md:mt-[-140px] mb-0 md:-mb-12">
-      <div className="bg-[#0088cc]/60 backdrop-blur-md rounded-t-2xl p-6 shadow-xl pt-3">
+    <section className="relative z-10 w-full md:w-1/2 mt-6 md:mt-0">
+      <div className="bg-[#0088cc]/60 backdrop-blur-md rounded-t-2xl p-6 shadow-xl pt-3 pb-8">
         {newsItems.length > 0 ? (
           <ul className="flex flex-col">
             {newsItems.map((item, index) => (

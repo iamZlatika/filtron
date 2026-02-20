@@ -13,7 +13,7 @@ export async function Home({
   const t = getDictionary(locale);
 
   return (
-    <div className="flex-1 flex flex-col justify-evenly">
+    <div className="flex-1 flex flex-col justify-end">
       <Banner t={t} locale={locale} />
       <NewsPanel locale={locale} news={newsList} />
     </div>

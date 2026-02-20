@@ -12,7 +12,7 @@ const prisma = new PrismaClient({ adapter });
 async function main() {
   console.log("Создание администратора...");
 
-  const adminName = "filtradmin1";
+  const adminName = "filtradmin";
   const password = "tempPass123";
   const hashedPassword = await bcrypt.hash(password, 10);
 
