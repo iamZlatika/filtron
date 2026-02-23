@@ -6,8 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="49dcc720-8a1c-4638-8891-65dbcda4c085" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prisma/seed.ts" beforeDir="false" afterPath="$PROJECT_DIR$/prisma/seed.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/news.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/news.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -168,7 +166,9 @@
       <workItem from="1771419938906" duration="9157000" />
       <workItem from="1771503606906" duration="10707000" />
       <workItem from="1771530638045" duration="2619000" />
-      <workItem from="1771576019356" duration="6956000" />
+      <workItem from="1771576019356" duration="7281000" />
+      <workItem from="1771764506623" duration="167000" />
+      <workItem from="1771771493723" duration="994000" />
     </task>
     <servers />
   </component>
